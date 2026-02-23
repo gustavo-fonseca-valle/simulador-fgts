@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function calcularSaqueAniversario(saldo: number) {
   if (saldo <= 500) return saldo * 0.5
@@ -16,6 +16,15 @@ export default function ComparativoFGTSPage() {
 
   const saqueAniversario = calcularSaqueAniversario(saldo)
   const saqueRescisao = saldo + saldo * 0.4
+
+  useEffect(() => {
+    try {
+      // @ts-ignore
+      (window.adsbygoogle = window.adsbygoogle || []).push({})
+    } catch (err) {
+      console.log(err)
+    }
+  }, [])
 
   return (
     <main style={{ maxWidth: 800, margin: "40px auto", padding: 20 }}>
@@ -67,6 +76,18 @@ export default function ComparativoFGTSPage() {
           Valor total em caso de demissão:
           <strong> R$ {saqueRescisao.toFixed(2)}</strong>
         </p>
+      </div>
+
+      {/* BLOCO DE ANÚNCIO */}
+      <div style={{ marginTop: 40 }}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-5817280149271380"
+          data-ad-slot="1234567890"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
       </div>
     </main>
   )
