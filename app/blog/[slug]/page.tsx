@@ -1,5 +1,9 @@
-import { posts } from "@/lib/posts"
+import { posts, type Post } from "../../lib/posts"
 import { notFound } from "next/navigation"
+
+type Params = {
+  slug: string
+}
 
 export async function generateStaticParams() {
   return posts.map((post) => ({
@@ -10,9 +14,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Params
 }) {
-  const post = posts.find((p) => p.slug === params.slug)
+  const post: Post | undefined = posts.find(
+    (p) => p.slug === params.slug
+  )
 
   if (!post) {
     return {
@@ -21,7 +27,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: post.title + " | FGTS 2026",
+    title: `${post.title} | FGTS 2026`,
     description: post.description,
   }
 }
@@ -29,9 +35,11 @@ export async function generateMetadata({
 export default function PostPage({
   params,
 }: {
-  params: { slug: string }
+  params: Params
 }) {
-  const post = posts.find((p) => p.slug === params.slug)
+  const post: Post | undefined = posts.find(
+    (p) => p.slug === params.slug
+  )
 
   if (!post) {
     notFound()

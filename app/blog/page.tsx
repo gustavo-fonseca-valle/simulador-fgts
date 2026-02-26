@@ -1,31 +1,22 @@
 import Link from "next/link"
-import { posts } from "@/lib/posts"
+import { posts } from "../lib/posts"
 
 export const metadata = {
-  title: "Blog FGTS 2026 | Guias e Simuladores Atualizados",
+  title: "Blog FGTS 2026",
   description:
-    "Artigos completos sobre FGTS 2026, saque-aniversário, multa de 40% e saque-rescisão. Conteúdo atualizado e explicativo.",
+    "Artigos atualizados sobre FGTS, saque-aniversário, multa de 40% e direitos trabalhistas.",
 }
 
 export default function BlogPage() {
   return (
     <main
       style={{
-        maxWidth: 900,
+        maxWidth: 800,
         margin: "0 auto",
         padding: 20,
-        lineHeight: 1.6,
       }}
     >
-      <h1>Artigos sobre FGTS 2026</h1>
-
-      <p>
-        Confira nossos guias completos sobre <strong>FGTS</strong>,
-        <strong> saque-aniversário</strong>, <strong>multa de 40%</strong> e
-        outras dúvidas frequentes dos trabalhadores brasileiros.
-      </p>
-
-      <hr style={{ margin: "30px 0" }} />
+      <h1 style={{ marginBottom: 30 }}>Blog FGTS 2026</h1>
 
       {posts.map((post) => (
         <article
@@ -36,17 +27,30 @@ export default function BlogPage() {
             borderBottom: "1px solid #eee",
           }}
         >
+          <h2 style={{ marginBottom: 10 }}>
+            <Link
+              href={`/blog/${post.slug}`}
+              style={{
+                textDecoration: "none",
+                color: "#1d4ed8",
+              }}
+            >
+              {post.title}
+            </Link>
+          </h2>
+
+          <p style={{ color: "#666" }}>{post.description}</p>
+
           <Link
             href={`/blog/${post.slug}`}
-            style={{ textDecoration: "none", color: "inherit" }}
+            style={{
+              display: "inline-block",
+              marginTop: 10,
+              fontWeight: "bold",
+              color: "#2563eb",
+            }}
           >
-            <h2 style={{ marginBottom: 10 }}>{post.title}</h2>
-          </Link>
-
-          <p style={{ color: "#555" }}>{post.description}</p>
-
-          <Link href={`/blog/${post.slug}`}>
-            <span style={{ fontSize: 14 }}>Ler artigo completo →</span>
+            Ler artigo →
           </Link>
         </article>
       ))}
