@@ -1,127 +1,117 @@
-import AdsenseBlock from "@/components/AdsenseBlock"
+"use client"
+
+import { useState } from "react"
 
 export const metadata = {
-  title: "Simulador de Multa de 40% do FGTS - Cálculo Atualizado",
+  title: "Simulador de Multa de 40% do FGTS",
   description:
-    "Calcule a multa de 40% do FGTS em caso de demissão sem justa causa. Veja como funciona o cálculo e exemplos práticos.",
+    "Calcule online o valor da multa de 40% do FGTS em caso de demissão sem justa causa. Simulador gratuito e atualizado.",
 }
 
 export default function Multa40Page() {
-  return (
-    <main className="max-w-3xl mx-auto px-4 py-10">
+  const [saldo, setSaldo] = useState("")
+  const [resultado, setResultado] = useState<number | null>(null)
 
+  function calcularMulta(e: React.FormEvent) {
+    e.preventDefault()
+
+    const saldoNumerico = parseFloat(saldo.replace(",", "."))
+
+    if (!isNaN(saldoNumerico) && saldoNumerico > 0) {
+      const multa = saldoNumerico * 0.4
+      setResultado(multa)
+    } else {
+      setResultado(null)
+    }
+  }
+
+  return (
+    <main className="max-w-3xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold mb-6">
-        Simulador de Multa de 40% do FGTS
+        Simulador da Multa de 40% do FGTS
       </h1>
 
-      <p className="text-lg text-gray-700 mb-6">
-        A multa de 40% do FGTS é um direito garantido ao trabalhador
-        demitido sem justa causa. Nesta página você pode calcular
-        rapidamente o valor estimado e entender como funciona o cálculo.
+      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        A multa de 40% do FGTS é um direito do trabalhador dispensado sem justa
+        causa. O valor corresponde a 40% sobre todo o saldo acumulado na conta
+        do FGTS durante o contrato de trabalho.
       </p>
 
-      {/* ===================== */}
-      {/* AQUI ENTRA SEU FORM */}
-      {/* ===================== */}
+      <p className="text-gray-700 mb-8">
+        Utilize o simulador abaixo para estimar quanto você poderá receber de
+        multa rescisória.
+      </p>
 
-      <section className="my-8 p-6 border rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">
-          Calcule agora
-        </h2>
-
-        {/* Seu formulário existente aqui */}
-        <p className="text-gray-600">
-          (Insira aqui seu formulário de cálculo)
-        </p>
-      </section>
-
-      {/* Anúncio após conteúdo inicial */}
-      <div className="my-10">
-        <AdsenseBlock />
-      </div>
-
-      {/* Conteúdo Educativo */}
-      <section className="mt-10 space-y-6 text-gray-800">
-
-        <h2 className="text-2xl font-semibold">
-          Como funciona a multa de 40% do FGTS?
-        </h2>
-
-        <p>
-          A multa de 40% é paga pelo empregador quando ocorre demissão
-          sem justa causa. O valor é calculado sobre todos os depósitos
-          realizados na conta do FGTS durante o contrato de trabalho,
-          incluindo correções monetárias.
-        </p>
-
-        <h2 className="text-2xl font-semibold">
-          Como calcular?
-        </h2>
-
-        <p>
-          O cálculo é simples:
-        </p>
-
-        <div className="bg-gray-100 p-4 rounded-lg font-mono">
-          Total depositado no FGTS × 0,40
-        </div>
-
-        <p>
-          Por exemplo, se o total depositado foi de R$ 30.000,
-          a multa será de R$ 12.000.
-        </p>
-
-        <h2 className="text-2xl font-semibold">
-          Quem tem direito?
-        </h2>
-
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Trabalhadores demitidos sem justa causa</li>
-          <li>Casos de rescisão indireta</li>
-          <li>Encerramento das atividades da empresa</li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold">
-          Quem NÃO tem direito?
-        </h2>
-
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Pedido de demissão</li>
-          <li>Demissão por justa causa</li>
-          <li>Alguns acordos formais previstos em lei</li>
-        </ul>
-
-      </section>
-
-      {/* FAQ */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">
-          Perguntas Frequentes
-        </h2>
-
-        <div className="space-y-4">
-
+      {/* FORMULÁRIO */}
+      <section className="bg-gray-50 p-6 rounded-xl shadow-sm mb-10">
+        <form onSubmit={calcularMulta} className="space-y-4">
           <div>
-            <h3 className="font-semibold">
-              A multa é descontada do trabalhador?
-            </h3>
-            <p>
-              Não. A multa é paga integralmente pelo empregador.
-            </p>
+            <label className="block mb-2 font-medium">
+              Informe o saldo total do FGTS (R$):
+            </label>
+            <input
+              type="number"
+              step="0.01"
+              min="0"
+              placeholder="Ex: 15000"
+              value={saldo}
+              onChange={(e) => setSaldo(e.target.value)}
+              className="w-full border rounded-lg px-4 py-2"
+              required
+            />
           </div>
 
-          <div>
-            <h3 className="font-semibold">
-              Quem escolheu saque-aniversário recebe a multa?
-            </h3>
-            <p>
-              Sim. A multa de 40% continua sendo devida normalmente.
+          <button
+            type="submit"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+          >
+            Calcular Multa
+          </button>
+        </form>
+
+        {resultado !== null && (
+          <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p className="text-lg font-semibold">
+              Valor estimado da multa:
+            </p>
+            <p className="text-2xl font-bold text-green-700">
+              R$ {resultado.toFixed(2)}
             </p>
           </div>
-
-        </div>
+        )}
       </section>
 
+      {/* CONTEÚDO ADICIONAL */}
+      <section className="space-y-6 text-gray-700 leading-relaxed">
+        <h2 className="text-2xl font-semibold">
+          Quando a multa de 40% é paga?
+        </h2>
+
+        <p>
+          A multa é devida quando ocorre demissão sem justa causa. O empregador
+          deve pagar 40% sobre todos os depósitos realizados na conta do FGTS
+          durante o período de trabalho.
+        </p>
+
+        <p>
+          Em caso de acordo entre empregador e empregado, o percentual pode ser
+          reduzido para 20%, conforme previsto na legislação trabalhista.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          O que entra no cálculo?
+        </h2>
+
+        <p>
+          O cálculo considera o saldo total disponível na conta vinculada do
+          FGTS. Valores já sacados anteriormente não entram na base da multa.
+        </p>
+
+        <p>
+          Para obter o valor exato, recomenda-se consultar o extrato oficial do
+          FGTS junto à Caixa Econômica Federal.
+        </p>
+      </section>
     </main>
   )
 }
