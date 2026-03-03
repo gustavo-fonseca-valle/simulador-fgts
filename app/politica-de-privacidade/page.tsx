@@ -1,84 +1,114 @@
-export default function PoliticaDePrivacidade() {
+export const metadata = {
+  title: "Política de Privacidade",
+  description:
+    "Saiba como coletamos, utilizamos e protegemos suas informações em nosso site.",
+}
+
+export default function PoliticaPrivacidade() {
   return (
-    <main>
-      <h1>Política de Privacidade</h1>
+    <main className="max-w-3xl mx-auto px-4 py-10">
 
-      <p>
+      <h1 className="text-4xl font-bold mb-6">
+        Política de Privacidade
+      </h1>
+
+      <p className="mb-6 text-gray-700">
         A sua privacidade é importante para nós. Esta Política de Privacidade
-        descreve como as informações são coletadas, utilizadas e protegidas ao
-        acessar este site.
+        explica como coletamos, utilizamos e protegemos suas informações
+        ao utilizar nosso site.
       </p>
 
-      <h2>1. Coleta de Informações</h2>
-      <p>
-        Não coletamos informações pessoais identificáveis sem o seu consentimento.
-        Dados podem ser coletados automaticamente por meio de cookies e tecnologias
-        similares para fins estatísticos e de melhoria da experiência do usuário.
-      </p>
+      <section className="space-y-6 text-gray-800">
 
-      <h2>2. Uso de Cookies</h2>
-      <p>
-        Este site utiliza cookies para armazenar informações, incluindo preferências
-        do usuário e páginas acessadas, com o objetivo de otimizar a experiência
-        de navegação.
-      </p>
+        <h2 className="text-2xl font-semibold">
+          1. Informações que coletamos
+        </h2>
 
-      <h2>3. Google AdSense</h2>
-      <p>
-        Utilizamos serviços de publicidade fornecidos pelo Google, incluindo o
-        Google AdSense, que pode utilizar cookies para exibir anúncios relevantes
-        com base nas visitas anteriores do usuário a este e a outros sites.
-      </p>
+        <p>
+          Podemos coletar informações fornecidas diretamente por você,
+          como dados inseridos em formulários, além de informações
+          coletadas automaticamente por meio de cookies e tecnologias
+          semelhantes.
+        </p>
 
-      <p>
-        O Google pode usar o cookie DART para veicular anúncios aos usuários com
-        base em suas visitas a este site e a outros sites na Internet.
-      </p>
+        <h2 className="text-2xl font-semibold">
+          2. Uso de cookies
+        </h2>
 
-      <p>
-        Os usuários podem desativar o uso do cookie DART visitando a Política de
-        Privacidade da rede de conteúdo e dos anúncios do Google.
-      </p>
+        <p>
+          Utilizamos cookies para melhorar a experiência do usuário,
+          analisar o tráfego do site e exibir anúncios personalizados.
+        </p>
 
-      <h2>4. Compartilhamento de Informações</h2>
-      <p>
-        Não vendemos, trocamos ou transferimos para terceiros informações pessoais
-        identificáveis dos usuários.
-      </p>
+        <p>
+          Cookies são pequenos arquivos armazenados no seu dispositivo
+          que ajudam a entender o comportamento de navegação.
+        </p>
 
-      <h2>5. Links para Sites de Terceiros</h2>
-      <p>
-        Nosso site pode conter links para sites externos que não são operados por
-        nós. Não temos controle sobre o conteúdo e práticas desses sites e não
-        podemos aceitar responsabilidade por suas respectivas políticas de
-        privacidade.
-      </p>
+        <h2 className="text-2xl font-semibold">
+          3. Publicidade e Google AdSense
+        </h2>
 
-      <h2>6. Segurança</h2>
-      <p>
-        Adotamos medidas técnicas e organizacionais adequadas para proteger as
-        informações contra acesso não autorizado, alteração, divulgação ou
-        destruição.
-      </p>
+        <p>
+          Este site utiliza o serviço de publicidade do Google AdSense.
+          O Google pode utilizar cookies para exibir anúncios com base
+          em visitas anteriores a este e a outros sites.
+        </p>
 
-      <h2>7. Alterações nesta Política</h2>
-      <p>
-        Esta Política de Privacidade pode ser atualizada periodicamente.
-        Recomendamos que o usuário revise esta página regularmente para se manter
-        informado sobre quaisquer alterações.
-      </p>
+        <p>
+          Os usuários podem desativar a publicidade personalizada
+          acessando as configurações de anúncios do Google.
+        </p>
 
-      <h2>8. Contato</h2>
-      <p>
-        Caso tenha dúvidas sobre esta Política de Privacidade, entre em contato
-        por meio da página de contato disponível neste site.
-      </p>
+        <h2 className="text-2xl font-semibold">
+          4. Compartilhamento de informações
+        </h2>
 
-      <hr />
+        <p>
+          Não vendemos, trocamos ou transferimos suas informações pessoais
+          para terceiros, exceto quando necessário para cumprimento de
+          obrigações legais ou para prestação de serviços essenciais.
+        </p>
 
-      <p>
-        Última atualização: 2026
-      </p>
+        <h2 className="text-2xl font-semibold">
+          5. Segurança das informações
+        </h2>
+
+        <p>
+          Adotamos medidas técnicas e organizacionais para proteger
+          seus dados contra acesso não autorizado, alteração ou divulgação.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          6. Seus direitos
+        </h2>
+
+        <p>
+          Em conformidade com a Lei Geral de Proteção de Dados (LGPD),
+          você pode solicitar informações sobre os dados armazenados,
+          correção ou exclusão, quando aplicável.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          7. Alterações nesta política
+        </h2>
+
+        <p>
+          Podemos atualizar esta Política de Privacidade periodicamente.
+          Recomendamos que você revise esta página regularmente.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          8. Contato
+        </h2>
+
+        <p>
+          Caso tenha dúvidas sobre esta política, entre em contato
+          através da página de contato do site.
+        </p>
+
+      </section>
+
     </main>
   )
 }

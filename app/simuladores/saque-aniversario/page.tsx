@@ -1,108 +1,155 @@
-"use client"
+import AdsenseBlock from "@/components/AdsenseBlock"
 
-import { useState } from "react"
+export const metadata = {
+  title: "Simulador Saque-Aniversário FGTS 2026 - Calcule seu valor",
+  description:
+    "Calcule quanto você pode sacar no saque-aniversário do FGTS e entenda as vantagens, riscos e regras atualizadas.",
+}
 
-export default function Page() {
-  const [saldo, setSaldo] = useState<number | "">("")
-  const [resultado, setResultado] = useState<number | null>(null)
-
-  function calcularSaque() {
-    if (!saldo || saldo <= 0) {
-      setResultado(null)
-      return
-    }
-
-    let percentual = 0
-    let adicional = 0
-    const valor = Number(saldo)
-
-    if (valor <= 500) {
-      percentual = 0.5
-      adicional = 0
-    } else if (valor <= 1000) {
-      percentual = 0.4
-      adicional = 50
-    } else if (valor <= 5000) {
-      percentual = 0.3
-      adicional = 150
-    } else if (valor <= 10000) {
-      percentual = 0.2
-      adicional = 650
-    } else if (valor <= 15000) {
-      percentual = 0.15
-      adicional = 1150
-    } else if (valor <= 20000) {
-      percentual = 0.1
-      adicional = 1900
-    } else {
-      percentual = 0.05
-      adicional = 2900
-    }
-
-    const valorSaque = valor * percentual + adicional
-    setResultado(valorSaque)
-  }
-
+export default function SaqueAniversarioPage() {
   return (
-    <div style={{ maxWidth: 600, margin: "40px auto", padding: 20 }}>
-      <h1 style={{ fontSize: 28, fontWeight: "bold", marginBottom: 20 }}>
-        Simulador Saque-Aniversário FGTS
+    <main className="max-w-3xl mx-auto px-4 py-10">
+
+      <h1 className="text-4xl font-bold mb-6">
+        Simulador do Saque-Aniversário do FGTS
       </h1>
 
-      <p style={{ marginBottom: 20 }}>
-        Descubra quanto você pode sacar anualmente no saque-aniversário.
+      <p className="text-lg text-gray-700 mb-6">
+        O saque-aniversário permite retirar parte do saldo do FGTS todos
+        os anos. Use nosso simulador para estimar o valor disponível e
+        entenda se essa modalidade realmente vale a pena para sua situação.
       </p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        <input
-          type="number"
-          placeholder="Digite o saldo total do FGTS"
-          value={saldo}
-          onChange={(e) =>
-            setSaldo(e.target.value ? Number(e.target.value) : "")
-          }
-          style={{
-            padding: 10,
-            fontSize: 16,
-            borderRadius: 8,
-            border: "1px solid #ccc",
-          }}
-        />
+      {/* ========================= */}
+      {/* AQUI ENTRA SEU FORM REAL  */}
+      {/* ========================= */}
 
-        <button
-          onClick={calcularSaque}
-          style={{
-            padding: 12,
-            fontSize: 16,
-            borderRadius: 8,
-            border: "none",
-            backgroundColor: "#2563eb",
-            color: "white",
-            cursor: "pointer",
-          }}
-        >
-          Calcular saque
-        </button>
+      <section className="my-8 p-6 border rounded-xl">
+        <h2 className="text-xl font-semibold mb-4">
+          Calcule seu saque
+        </h2>
+
+        <p className="text-gray-600">
+          (Insira aqui seu formulário e cálculo atual)
+        </p>
+      </section>
+
+      {/* Anúncio após conteúdo inicial */}
+      <div className="my-10">
+        <AdsenseBlock />
       </div>
 
-      {resultado !== null && (
-        <div
-          style={{
-            marginTop: 30,
-            padding: 20,
-            backgroundColor: "#eff6ff",
-            borderRadius: 10,
-            border: "1px solid #bfdbfe",
-          }}
-        >
-          <h2 style={{ fontSize: 20, marginBottom: 10 }}>
-            Valor disponível para saque
-          </h2>
-          <p style={{ fontSize: 22, fontWeight: "bold", color: "#1d4ed8" }}>
-            R$ {resultado.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
-          </p>
+      {/* Conteúdo educativo */}
+      <section className="mt-10 space-y-6 text-gray-800">
+
+        <h2 className="text-2xl font-semibold">
+          O que é o saque-aniversário?
+        </h2>
+
+        <p>
+          O saque-aniversário é uma modalidade do FGTS que permite ao
+          trabalhador sacar anualmente uma parte do saldo disponível
+          no mês do seu aniversário. Ao optar por essa modalidade,
+          o trabalhador abre mão do saque integral em caso de demissão
+          sem justa causa.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          Como o valor é calculado?
+        </h2>
+
+        <p>
+          O valor depende da faixa de saldo do trabalhador.
+          Quanto maior o saldo, menor o percentual aplicado,
+          mas há uma parcela adicional fixa.
+        </p>
+
+        <p>
+          O cálculo combina:
+        </p>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Percentual sobre o saldo total</li>
+          <li>Parcela adicional fixa por faixa</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold">
+          Vantagens
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Acesso anual ao dinheiro</li>
+          <li>Possibilidade de antecipação via bancos</li>
+          <li>Alternativa para organização financeira</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold">
+          Riscos e desvantagens
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Perda do saque integral na demissão</li>
+          <li>Pode comprometer reserva de segurança</li>
+          <li>Antecipações geram juros</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold">
+          Saque-aniversário ou saque-rescisão?
+        </h2>
+
+        <p>
+          O saque-rescisão permite sacar todo o saldo do FGTS
+          em caso de demissão sem justa causa.
+          Já o saque-aniversário permite retiradas anuais,
+          mas limita o saque em caso de demissão.
+        </p>
+
+        <p>
+          A escolha ideal depende do seu perfil profissional,
+          estabilidade no emprego e necessidade de liquidez.
+        </p>
+
+      </section>
+
+      {/* FAQ */}
+      <section className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">
+          Perguntas Frequentes
+        </h2>
+
+        <div className="space-y-4">
+
+          <div>
+            <h3 className="font-semibold">
+              Posso cancelar o saque-aniversário?
+            </h3>
+            <p>
+              Sim, mas o retorno ao saque-rescisão pode ter período de carência.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Quem escolhe saque-aniversário perde a multa de 40%?
+            </h3>
+            <p>
+              Não. A multa continua sendo paga normalmente pelo empregador.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Vale a pena aderir?
+            </h3>
+            <p>
+              Depende do seu planejamento financeiro e estabilidade profissional.
+              Avalie riscos antes de decidir.
+            </p>
+          </div>
+
         </div>
-      )}
-    </div>
+      </section>
+
+    </main>
   )
 }

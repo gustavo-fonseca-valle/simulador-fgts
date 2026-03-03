@@ -7,56 +7,60 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header
-      style={{
-        borderBottom: "1px solid #ddd",
-        padding: "20px",
-        background: "#ffffff",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 900,
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        {/* Logo / Nome */}
-        <Link href="/" style={{ textDecoration: "none", color: "#000" }}>
-          <strong style={{ fontSize: 20 }}>Guia FGTS 2026</strong>
+    <header className="border-b bg-white">
+      <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+        
+        {/* Logo */}
+        <Link href="/" className="text-xl font-bold text-gray-900">
+          Guia Trabalhista
         </Link>
 
-        {/* Botão Mobile */}
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex gap-8 text-gray-700 font-medium">
+          <Link href="/" className="hover:text-black">
+            Home
+          </Link>
+          <Link href="/blog" className="hover:text-black">
+            Blog
+          </Link>
+          <Link href="/simuladores/multa-40" className="hover:text-black">
+            Multa 40%
+          </Link>
+          <Link href="/simuladores/saque-aniversario" className="hover:text-black">
+            Saque-Aniversário
+          </Link>
+          <Link href="/sobre" className="hover:text-black">
+            Sobre
+          </Link>
+          <Link href="/contato" className="hover:text-black">
+            Contato
+          </Link>
+        </nav>
+
+        {/* Mobile Button */}
         <button
+          className="md:hidden text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            fontSize: 18,
-            cursor: "pointer",
-          }}
-          className="menu-button"
         >
           ☰
         </button>
-
-        {/* Menu Desktop */}
-        <nav
-          style={{
-            display: "flex",
-            gap: 20,
-          }}
-          className="menu-desktop"
-        >
-          <Link href="/">Home</Link>
-          <Link href="/blog">Artigos</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/contato">Contato</Link>
-        </nav>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden border-t px-6 py-4 flex flex-col gap-4 bg-white">
+          <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+          <Link href="/simuladores/multa-40" onClick={() => setMenuOpen(false)}>
+            Multa 40%
+          </Link>
+          <Link href="/simuladores/saque-aniversario" onClick={() => setMenuOpen(false)}>
+            Saque-Aniversário
+          </Link>
+          <Link href="/sobre" onClick={() => setMenuOpen(false)}>Sobre</Link>
+          <Link href="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
+        </div>
+      )}
     </header>
   )
 }

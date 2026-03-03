@@ -1,69 +1,79 @@
-export default function Sobre() {
+export const metadata = {
+  title: "Sobre Nós",
+  description:
+    "Conheça o propósito do nosso site e como desenvolvemos conteúdos e simuladores financeiros de forma clara e responsável.",
+}
+
+export default function SobrePage() {
   return (
-    <main>
-      <h1>Sobre o Guia FGTS</h1>
+    <main className="max-w-3xl mx-auto px-4 py-10">
 
-      <p>
-        O Guia FGTS é um portal informativo criado com o objetivo de ajudar
-        trabalhadores brasileiros a compreender melhor seus direitos e opções
-        relacionadas ao Fundo de Garantia do Tempo de Serviço (FGTS).
+      <h1 className="text-4xl font-bold mb-6">
+        Sobre o Projeto
+      </h1>
+
+      <p className="mb-6 text-gray-700">
+        Este site foi criado com o objetivo de oferecer informações claras,
+        acessíveis e práticas sobre temas financeiros e trabalhistas,
+        incluindo ferramentas de simulação para auxiliar no planejamento pessoal.
       </p>
 
-      <p>
-        Nosso foco é fornecer conteúdos claros, atualizados e de fácil
-        entendimento, além de disponibilizar simuladores que auxiliam na tomada
-        de decisões financeiras.
-      </p>
+      <section className="space-y-6 text-gray-800">
 
-      <h2>Nossa Missão</h2>
+        <h2 className="text-2xl font-semibold">
+          Nossa missão
+        </h2>
 
-      <p>
-        Acreditamos que informação financeira de qualidade deve ser acessível a
-        todos. Nossa missão é traduzir regras, tabelas e modalidades do FGTS
-        em explicações simples e objetivas.
-      </p>
+        <p>
+          Nossa missão é simplificar informações que muitas vezes são
+          complexas ou difíceis de entender, ajudando o usuário a tomar
+          decisões mais conscientes e bem informadas.
+        </p>
 
-      <h2>O que você encontra aqui</h2>
+        <h2 className="text-2xl font-semibold">
+          Como desenvolvemos o conteúdo
+        </h2>
 
-      <ul>
-        <li>Simuladores de Saque-Aniversário</li>
-        <li>Comparativos entre modalidades de saque</li>
-        <li>Explicações sobre multa de 40%</li>
-        <li>Conteúdos atualizados sobre regras do FGTS</li>
-        <li>Perguntas frequentes e orientações gerais</li>
-      </ul>
+        <p>
+          Todo o conteúdo publicado é elaborado com base em fontes públicas,
+          legislação vigente e boas práticas de educação financeira.
+          Buscamos manter as informações atualizadas e apresentadas de forma
+          didática.
+        </p>
 
-      <h2>Importante</h2>
+        <p>
+          As ferramentas de simulação disponíveis no site têm caráter
+          informativo e estimativo, não substituindo orientação profissional
+          especializada.
+        </p>
 
-      <p>
-        Este site possui caráter exclusivamente informativo e educacional.
-        Não somos vinculados a órgãos governamentais, instituições financeiras
-        ou à Caixa Econômica Federal.
-      </p>
+        <h2 className="text-2xl font-semibold">
+          Transparência e responsabilidade
+        </h2>
 
-      <p>
-        Para informações oficiais, recomendamos sempre consultar os canais
-        governamentais e instituições responsáveis.
-      </p>
+        <p>
+          Trabalhamos com transparência e responsabilidade na divulgação
+          de informações. Caso identifique qualquer imprecisão ou deseje
+          sugerir melhorias, entre em contato através da página de contato.
+        </p>
 
-      <h2>Transparência</h2>
+        <h2 className="text-2xl font-semibold">
+          Monetização e publicidade
+        </h2>
 
-      <p>
-        Podemos exibir anúncios de terceiros por meio de plataformas como o
-        Google AdSense. Esses anúncios ajudam a manter o site ativo e gratuito
-        para todos os usuários.
-      </p>
+        <p>
+          Este site pode exibir anúncios por meio de plataformas de publicidade
+          como o Google AdSense. Esses anúncios ajudam a manter o projeto ativo
+          e gratuito para todos os usuários.
+        </p>
 
-      <p>
-        Nosso compromisso é manter a qualidade, clareza e responsabilidade
-        nas informações publicadas.
-      </p>
+        <p>
+          A exibição de anúncios não influencia a produção de conteúdo,
+          que permanece independente e focado na utilidade para o leitor.
+        </p>
 
-      <hr />
+      </section>
 
-      <p>
-        Obrigado por utilizar o Guia FGTS.
-      </p>
     </main>
   )
 }

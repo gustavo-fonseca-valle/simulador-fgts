@@ -14,12 +14,12 @@ export default function AdsenseBlock() {
 
   return (
     <ins
-      className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client="SEU_ID_AQUI"
-      data-ad-slot="SEU_SLOT_AQUI"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
+  className="adsbygoogle"
+  style={{ display: "block" }}
+  data-ad-client="ca-pub-5817280149271380"
+  data-ad-slot="5061237754"
+  data-ad-format="auto"
+  data-full-width-responsive="true"
+/>
   )
 }
