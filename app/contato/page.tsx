@@ -30,7 +30,7 @@ export default function ContatoPage() {
         </p>
 
         <p className="text-blue-600 font-medium">
-          gusfvalle@gmail.com
+          contato.simuladorfgts@gmail.com
         </p>
 
         <p className="text-gray-600 mt-4">
