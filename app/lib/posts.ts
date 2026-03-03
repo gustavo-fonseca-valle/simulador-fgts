@@ -85,7 +85,7 @@ Antes de aderir, analise sua situação profissional e financeira. O saque-anive
   },
 
   {
-    slug: "como-calcular-multa-40-fgts",
+    slug: "multa-40-fgts-como-funciona",
     title: "Como calcular a multa de 40% do FGTS: guia completo",
     description:
       "Aprenda como funciona o cálculo da multa de 40% do FGTS em caso de demissão sem justa causa, com exemplos detalhados.",
