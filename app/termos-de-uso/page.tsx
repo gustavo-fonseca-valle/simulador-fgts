@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Termos de Uso",
+  title: "Termos de Uso | Simulador FGTS",
   description:
-    "Leia os termos e condições de uso do nosso site e entenda suas responsabilidades ao utilizar nossos conteúdos e simuladores.",
+    "Leia os termos e condições de uso do Simulador FGTS e entenda suas responsabilidades ao utilizar nossos conteúdos e ferramentas.",
 }
 
 export default function TermosDeUso() {
@@ -13,59 +13,79 @@ export default function TermosDeUso() {
       </h1>
 
       <p className="mb-6 text-gray-700">
-        Ao acessar e utilizar este site, você concorda com os termos e
-        condições descritos abaixo. Caso não concorde com qualquer parte
-        destes termos, recomendamos que não utilize o site.
+        Ao acessar e utilizar o site <strong>Simulador FGTS</strong>
+        (https://simuladorfgts.com.br), você concorda com os termos
+        e condições descritos abaixo. Caso não concorde com qualquer
+        parte destes termos, recomendamos que não utilize o site.
       </p>
 
       <section className="space-y-6 text-gray-800">
 
         <h2 className="text-2xl font-semibold">
-          1. Finalidade do site
+          1. Finalidade do Site
         </h2>
 
         <p>
-          Este site disponibiliza conteúdos informativos e ferramentas de
-          simulação relacionadas a temas financeiros e trabalhistas.
-          As informações têm caráter educativo e não constituem
-          aconselhamento jurídico, financeiro ou contábil.
+          O site tem caráter exclusivamente informativo e educativo,
+          oferecendo conteúdos e ferramentas de simulação relacionados
+          ao Fundo de Garantia do Tempo de Serviço (FGTS) e temas
+          financeiros correlatos.
+        </p>
+
+        <p>
+          As informações disponibilizadas não constituem aconselhamento
+          jurídico, financeiro, contábil ou qualquer outro tipo de
+          consultoria profissional.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          2. Uso das informações
+          2. Simuladores e Estimativas
         </h2>
 
         <p>
-          O usuário é responsável pela forma como utiliza as informações
-          disponibilizadas. As decisões tomadas com base no conteúdo do
-          site são de inteira responsabilidade do usuário.
+          Os simuladores fornecem estimativas baseadas nos dados inseridos
+          pelo usuário e em regras públicas conhecidas no momento da
+          publicação.
         </p>
 
-        <h2 className="text-2xl font-semibold">
-          3. Simuladores e estimativas
-        </h2>
-
         <p>
-          As ferramentas de simulação fornecem estimativas com base em
-          dados inseridos pelo usuário e regras públicas conhecidas.
           Os resultados podem variar conforme alterações na legislação,
-          regras institucionais ou situações específicas.
+          regras institucionais ou situações individuais específicas.
+          Não garantimos exatidão absoluta dos cálculos.
         </p>
 
         <p>
-          Não garantimos exatidão absoluta dos cálculos, sendo recomendável
-          confirmar informações junto às fontes oficiais ou profissionais
-          especializados.
+          Recomenda-se que o usuário confirme informações junto a fontes
+          oficiais ou profissionais especializados antes de tomar decisões.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          4. Propriedade intelectual
+          3. Responsabilidade do Usuário
         </h2>
 
         <p>
-          Todo o conteúdo do site, incluindo textos, estrutura,
-          códigos e ferramentas, é protegido por direitos autorais.
-          É proibida a reprodução sem autorização prévia.
+          O usuário é integralmente responsável pela utilização das
+          informações e ferramentas disponibilizadas no site.
+        </p>
+
+        <p>
+          O site não se responsabiliza por decisões tomadas com base
+          nos conteúdos apresentados.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          4. Propriedade Intelectual
+        </h2>
+
+        <p>
+          Todo o conteúdo do site, incluindo textos, códigos, estrutura,
+          design e ferramentas, é protegido por direitos autorais e
+          legislação aplicável.
+        </p>
+
+        <p>
+          É proibida a reprodução, modificação ou redistribuição sem
+          autorização prévia.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -73,39 +93,53 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          Este site pode exibir anúncios por meio de plataformas
-          como o Google AdSense. A exibição de anúncios contribui
-          para a manutenção do projeto e não interfere na produção
-          de conteúdo.
+          O site pode exibir anúncios por meio de plataformas como
+          o Google AdSense. A exibição de publicidade contribui para
+          a manutenção e continuidade do projeto.
+        </p>
+
+        <p>
+          O conteúdo editorial é produzido de forma independente
+          e não sofre influência direta de anunciantes.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          6. Limitação de responsabilidade
+          6. Links para Terceiros
         </h2>
 
         <p>
-          Não nos responsabilizamos por perdas ou danos decorrentes
-          da utilização das informações ou ferramentas disponíveis
-          neste site.
+          O site pode conter links para sites externos. Não somos
+          responsáveis pelo conteúdo, políticas ou práticas de
+          privacidade de terceiros.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          7. Modificações
+          7. Limitação de Responsabilidade
+        </h2>
+
+        <p>
+          Não nos responsabilizamos por danos diretos ou indiretos
+          decorrentes do uso ou da incapacidade de uso das informações
+          e ferramentas disponibilizadas.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          8. Alterações nos Termos
         </h2>
 
         <p>
           Reservamo-nos o direito de modificar estes Termos de Uso
-          a qualquer momento, sendo recomendável a revisão periódica
+          a qualquer momento. Recomendamos a revisão periódica
           desta página.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          8. Contato
+          9. Contato
         </h2>
 
         <p>
           Em caso de dúvidas sobre estes Termos de Uso,
-          entre em contato por meio da página de contato do site.
+          utilize a página de contato disponível no site.
         </p>
 
       </section>

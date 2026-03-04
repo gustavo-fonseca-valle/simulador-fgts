@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Sobre Nós",
+  title: "Sobre o Simulador FGTS",
   description:
-    "Conheça o propósito do nosso site e como desenvolvemos conteúdos e simuladores financeiros de forma clara e responsável.",
+    "Conheça o propósito do Simulador FGTS e como desenvolvemos conteúdos e ferramentas financeiras com responsabilidade e clareza.",
 }
 
 export default function SobrePage() {
@@ -9,13 +9,14 @@ export default function SobrePage() {
     <main className="max-w-3xl mx-auto px-4 py-10">
 
       <h1 className="text-4xl font-bold mb-6">
-        Sobre o Projeto
+        Sobre o Simulador FGTS
       </h1>
 
       <p className="mb-6 text-gray-700">
-        Este site foi criado com o objetivo de oferecer informações claras,
-        acessíveis e práticas sobre temas financeiros e trabalhistas,
-        incluindo ferramentas de simulação para auxiliar no planejamento pessoal.
+        O <strong>Simulador FGTS</strong> é um projeto independente criado
+        com o objetivo de oferecer informações claras, acessíveis e
+        confiáveis sobre o Fundo de Garantia do Tempo de Serviço (FGTS)
+        e temas financeiros relacionados.
       </p>
 
       <section className="space-y-6 text-gray-800">
@@ -25,51 +26,69 @@ export default function SobrePage() {
         </h2>
 
         <p>
-          Nossa missão é simplificar informações que muitas vezes são
-          complexas ou difíceis de entender, ajudando o usuário a tomar
-          decisões mais conscientes e bem informadas.
+          Nossa missão é simplificar informações financeiras que muitas
+          vezes são complexas ou difíceis de entender, ajudando trabalhadores
+          a compreender melhor seus direitos e possibilidades.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          Como desenvolvemos o conteúdo
+          Como produzimos o conteúdo
         </h2>
 
         <p>
-          Todo o conteúdo publicado é elaborado com base em fontes públicas,
-          legislação vigente e boas práticas de educação financeira.
-          Buscamos manter as informações atualizadas e apresentadas de forma
-          didática.
+          Todo o conteúdo publicado é baseado em legislação vigente,
+          normas oficiais e informações públicas disponibilizadas por
+          órgãos governamentais.
         </p>
 
         <p>
-          As ferramentas de simulação disponíveis no site têm caráter
-          informativo e estimativo, não substituindo orientação profissional
-          especializada.
+          Buscamos manter as informações atualizadas e apresentadas de
+          forma didática, com foco na clareza e utilidade prática.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          Transparência e responsabilidade
+          Sobre os simuladores
         </h2>
 
         <p>
-          Trabalhamos com transparência e responsabilidade na divulgação
-          de informações. Caso identifique qualquer imprecisão ou deseje
-          sugerir melhorias, entre em contato através da página de contato.
+          As ferramentas de simulação foram desenvolvidas para fornecer
+          estimativas baseadas nas regras conhecidas do FGTS.
+        </p>
+
+        <p>
+          Os resultados têm caráter informativo e não substituem
+          orientação jurídica, contábil ou financeira especializada.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          Monetização e publicidade
+          Independência e transparência
         </h2>
 
         <p>
-          Este site pode exibir anúncios por meio de plataformas de publicidade
-          como o Google AdSense. Esses anúncios ajudam a manter o projeto ativo
-          e gratuito para todos os usuários.
+          O site pode exibir anúncios por meio de plataformas como
+          o Google AdSense. Essa monetização contribui para manter
+          o projeto gratuito e acessível.
         </p>
 
         <p>
-          A exibição de anúncios não influencia a produção de conteúdo,
-          que permanece independente e focado na utilidade para o leitor.
+          A produção de conteúdo é independente e não sofre influência
+          direta de anunciantes.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          Compromisso com o usuário
+        </h2>
+
+        <p>
+          Trabalhamos com responsabilidade na divulgação das informações.
+          Caso identifique qualquer imprecisão ou deseje sugerir melhorias,
+          utilize a página de contato para falar conosco.
+        </p>
+
+        <p>
+          Este projeto é mantido por profissional da área de tecnologia
+          com experiência em desenvolvimento de sistemas e análise de dados,
+          com foco na criação de ferramentas úteis e acessíveis.
         </p>
 
       </section>
