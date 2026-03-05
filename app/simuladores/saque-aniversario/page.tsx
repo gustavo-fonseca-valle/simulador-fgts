@@ -1,4 +1,5 @@
 import SaqueAniversarioForm from "./SaqueAniversarioForm"
+import AdsenseBlock from "@/components/AdsenseBlock"
 
 export const metadata = {
   title: "Simulador de Saque-Aniversário do FGTS",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function SaqueAniversarioPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
+
       <h1 className="text-4xl font-bold mb-6">
         Simulador de Saque-Aniversário do FGTS
       </h1>
@@ -23,11 +25,22 @@ export default function SaqueAniversarioPage() {
         Utilize o simulador abaixo para estimar quanto você poderá sacar.
       </p>
 
+      {/* ANÚNCIO */}
+      <div className="my-10">
+        <AdsenseBlock />
+      </div>
+
       {/* FORMULÁRIO */}
       <SaqueAniversarioForm />
 
+      {/* ANÚNCIO */}
+      <div className="my-10">
+        <AdsenseBlock />
+      </div>
+
       {/* CONTEÚDO EDUCATIVO */}
       <section className="mt-12 space-y-6 text-gray-700 leading-relaxed">
+
         <h2 className="text-2xl font-semibold">
           Como funciona o cálculo do saque-aniversário?
         </h2>
@@ -68,7 +81,9 @@ export default function SaqueAniversarioPage() {
           financeiro pessoal. É importante avaliar os riscos antes de optar pela
           modalidade.
         </p>
+
       </section>
+
     </main>
   )
 }
