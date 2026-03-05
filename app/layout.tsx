@@ -73,10 +73,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className="bg-gray-50 text-gray-900">
         <Header />
 
-        <main style={{ maxWidth: 900, margin: "0 auto", padding: 20 }}>
+        <main className="max-w-5xl mx-auto px-6 py-8">
           {children}
         </main>
 
