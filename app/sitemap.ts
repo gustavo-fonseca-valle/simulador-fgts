@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 import { posts } from "./lib/posts"
 
-const BASE_URL = "https://simuladorfgts.com.br"
+const BASE_URL = "https://www.simuladorfgts.com.br"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
@@ -31,6 +31,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
+    },
+
+    // 🔹 Simuladores
+    {
+      url: `${BASE_URL}/simuladores/multa-40`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/simuladores/saque-aniversario`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    // 🔹 Guias FGTS
+    {
+      url: `${BASE_URL}/tabela-saque-aniversario-fgts-2026`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/fgts-rende-quanto-por-ano`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/como-calcular-fgts-de-demissao`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ]
 
