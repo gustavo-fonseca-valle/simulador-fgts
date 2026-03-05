@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { posts } from "../lib/posts"
+import AdsenseBlock from "@/components/AdsenseBlock"
 
 export const metadata = {
   title: "Blog - Guia Trabalhista e Financeiro",
@@ -10,6 +11,7 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <main className="max-w-5xl mx-auto px-6 py-12">
+      
       <header className="mb-12">
         <h1 className="text-4xl font-bold mb-4">
           Blog sobre FGTS e Direitos Trabalhistas
@@ -27,6 +29,7 @@ export default function BlogPage() {
         </p>
       </header>
 
+      {/* LISTA DE POSTS */}
       <section className="grid md:grid-cols-2 gap-8">
         {posts.map((post) => (
           <article
@@ -51,6 +54,12 @@ export default function BlogPage() {
         ))}
       </section>
 
+      {/* ANÚNCIO */}
+      <div className="my-16">
+        <AdsenseBlock />
+      </div>
+
+      {/* CONTEÚDO EDITORIAL */}
       <section className="mt-16 text-gray-700 leading-relaxed">
         <h2 className="text-2xl font-bold mb-4">
           Por que entender o FGTS é importante?
@@ -67,6 +76,12 @@ export default function BlogPage() {
           melhor suas finanças em momentos de transição profissional.
         </p>
       </section>
+
+      {/* ANÚNCIO FINAL */}
+      <div className="my-16">
+        <AdsenseBlock />
+      </div>
+
     </main>
   )
 }
