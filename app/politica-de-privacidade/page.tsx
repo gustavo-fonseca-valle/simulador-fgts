@@ -14,7 +14,7 @@ export default function PoliticaPrivacidade() {
 
       <p className="mb-6 text-gray-700">
         Esta Política de Privacidade descreve como o site <strong>Simulador FGTS</strong>
-        (https://simuladorfgts.com.br) coleta, utiliza e protege as informações
+        (https://www.simuladorfgts.com.br) coleta, utiliza e protege as informações
         dos usuários, em conformidade com a Lei Geral de Proteção de Dados
         (Lei nº 13.709/2018 – LGPD).
       </p>
@@ -27,14 +27,13 @@ export default function PoliticaPrivacidade() {
 
         <p>
           Podemos coletar informações fornecidas voluntariamente pelo usuário,
-          como nome e e-mail quando enviados por formulários.
+          como nome e e-mail quando enviados por formulários de contato.
         </p>
 
         <p>
           Também coletamos automaticamente determinadas informações,
           incluindo endereço IP, tipo de navegador, páginas visitadas,
-          tempo de permanência e dados de dispositivo, com a finalidade
-          de melhorar a experiência do usuário.
+          tempo de permanência no site e dados do dispositivo.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -42,13 +41,13 @@ export default function PoliticaPrivacidade() {
         </h2>
 
         <p>
-          Utilizamos cookies para personalizar conteúdo, analisar o tráfego
-          e exibir anúncios relevantes.
+          Utilizamos cookies para melhorar a experiência do usuário,
+          analisar o tráfego do site e exibir publicidade relevante.
         </p>
 
         <p>
           Cookies são pequenos arquivos armazenados no navegador do usuário.
-          Você pode desativá-los nas configurações do seu navegador.
+          Você pode desativá-los nas configurações do seu navegador a qualquer momento.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -57,14 +56,14 @@ export default function PoliticaPrivacidade() {
 
         <p>
           Este site utiliza o serviço de publicidade do Google AdSense.
-          O Google pode utilizar cookies e tecnologias semelhantes para
-          exibir anúncios com base nas visitas anteriores do usuário
+          O Google pode utilizar cookies e tecnologias semelhantes
+          para exibir anúncios com base nas visitas anteriores do usuário
           a este e a outros sites.
         </p>
 
         <p>
-          O uso de cookies pelo Google permite a exibição de anúncios
-          personalizados com base na navegação do usuário.
+          O Google utiliza o cookie DoubleClick para permitir que ele e seus parceiros
+          exibam anúncios com base na navegação do usuário.
         </p>
 
         <p>
@@ -77,7 +76,7 @@ export default function PoliticaPrivacidade() {
 
         <p>
           Para mais informações sobre como o Google utiliza os dados,
-          acesse:
+          consulte:
         </p>
 
         <p className="break-all">
@@ -90,8 +89,8 @@ export default function PoliticaPrivacidade() {
 
         <p>
           Não vendemos, trocamos ou transferimos suas informações pessoais
-          para terceiros, exceto quando exigido por lei ou quando necessário
-          para o funcionamento adequado do site.
+          para terceiros, exceto quando necessário para operar o site,
+          cumprir obrigações legais ou proteger direitos.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -99,44 +98,56 @@ export default function PoliticaPrivacidade() {
         </h2>
 
         <p>
-          Adotamos medidas técnicas e organizacionais para proteger os dados
-          contra acesso não autorizado, alteração ou divulgação indevida.
+          Adotamos medidas técnicas e organizacionais adequadas
+          para proteger os dados pessoais contra acesso não autorizado,
+          alteração, divulgação ou destruição.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          6. Direitos do Usuário
+          6. Retenção de Dados
         </h2>
 
         <p>
-          Nos termos da LGPD, o usuário pode solicitar acesso, correção
-          ou exclusão de seus dados pessoais, quando aplicável.
+          Os dados coletados são armazenados apenas pelo tempo necessário
+          para cumprir as finalidades descritas nesta política,
+          respeitando as exigências legais aplicáveis.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          7. Links Externos
+          7. Direitos do Usuário
         </h2>
 
         <p>
-          Nosso site pode conter links para sites externos. Não somos
-          responsáveis pelas políticas de privacidade de terceiros.
+          Nos termos da LGPD, o usuário pode solicitar acesso, correção,
+          atualização ou exclusão de seus dados pessoais quando aplicável.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          8. Alterações nesta Política
+          8. Links Externos
         </h2>
 
         <p>
-          Esta Política pode ser atualizada periodicamente. Recomendamos
-          que o usuário revise esta página regularmente.
+          Nosso site pode conter links para sites externos.
+          Não somos responsáveis pelas práticas de privacidade
+          de outros sites.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          9. Contato
+          9. Alterações nesta Política
         </h2>
 
         <p>
-          Em caso de dúvidas, utilize a página de contato do site
-          para falar conosco.
+          Esta política pode ser atualizada periodicamente.
+          Recomendamos que o usuário revise esta página regularmente.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          10. Contato
+        </h2>
+
+        <p>
+          Em caso de dúvidas sobre esta política de privacidade,
+          utilize a página de contato disponível no site.
         </p>
 
       </section>

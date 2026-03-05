@@ -26,10 +26,15 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          O site tem caráter exclusivamente informativo e educativo,
+          O site possui caráter exclusivamente informativo e educativo,
           oferecendo conteúdos e ferramentas de simulação relacionados
           ao Fundo de Garantia do Tempo de Serviço (FGTS) e temas
           financeiros correlatos.
+        </p>
+
+        <p>
+          O site <strong>não possui vínculo com a Caixa Econômica Federal,
+          Governo Federal ou qualquer órgão público</strong>.
         </p>
 
         <p>
@@ -43,20 +48,21 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          Os simuladores fornecem estimativas baseadas nos dados inseridos
-          pelo usuário e em regras públicas conhecidas no momento da
-          publicação.
+          Os simuladores disponibilizados fornecem estimativas baseadas
+          nos dados inseridos pelo usuário e nas regras públicas
+          conhecidas no momento da publicação.
         </p>
 
         <p>
           Os resultados podem variar conforme alterações na legislação,
           regras institucionais ou situações individuais específicas.
-          Não garantimos exatidão absoluta dos cálculos.
+          Portanto, não garantimos exatidão absoluta dos cálculos.
         </p>
 
         <p>
-          Recomenda-se que o usuário confirme informações junto a fontes
-          oficiais ou profissionais especializados antes de tomar decisões.
+          Recomendamos que o usuário confirme informações junto
+          a fontes oficiais ou profissionais especializados
+          antes de tomar decisões financeiras.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -64,13 +70,13 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          O usuário é integralmente responsável pela utilização das
-          informações e ferramentas disponibilizadas no site.
+          O usuário é integralmente responsável pela forma como utiliza
+          as informações e ferramentas disponibilizadas no site.
         </p>
 
         <p>
-          O site não se responsabiliza por decisões tomadas com base
-          nos conteúdos apresentados.
+          O Simulador FGTS não se responsabiliza por decisões tomadas
+          com base nos conteúdos apresentados.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -78,14 +84,14 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          Todo o conteúdo do site, incluindo textos, códigos, estrutura,
-          design e ferramentas, é protegido por direitos autorais e
-          legislação aplicável.
+          Todo o conteúdo do site, incluindo textos, códigos,
+          simuladores, design e estrutura, é protegido por
+          direitos autorais e legislação aplicável.
         </p>
 
         <p>
-          É proibida a reprodução, modificação ou redistribuição sem
-          autorização prévia.
+          É proibida a reprodução, distribuição ou modificação
+          sem autorização prévia.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -93,14 +99,18 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          O site pode exibir anúncios por meio de plataformas como
-          o Google AdSense. A exibição de publicidade contribui para
-          a manutenção e continuidade do projeto.
+          Este site pode exibir anúncios por meio de plataformas
+          de publicidade, incluindo o <strong>Google AdSense</strong>.
         </p>
 
         <p>
-          O conteúdo editorial é produzido de forma independente
-          e não sofre influência direta de anunciantes.
+          Essas plataformas podem utilizar cookies e tecnologias
+          semelhantes para exibir anúncios relevantes aos usuários.
+        </p>
+
+        <p>
+          A publicidade exibida ajuda a manter o funcionamento
+          e a produção de conteúdo do site.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -108,9 +118,12 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          O site pode conter links para sites externos. Não somos
-          responsáveis pelo conteúdo, políticas ou práticas de
-          privacidade de terceiros.
+          O site pode conter links para sites externos.
+        </p>
+
+        <p>
+          Não nos responsabilizamos pelo conteúdo, políticas
+          ou práticas de privacidade de sites de terceiros.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -120,7 +133,7 @@ export default function TermosDeUso() {
         <p>
           Não nos responsabilizamos por danos diretos ou indiretos
           decorrentes do uso ou da incapacidade de uso das informações
-          e ferramentas disponibilizadas.
+          e ferramentas disponibilizadas no site.
         </p>
 
         <h2 className="text-2xl font-semibold">
@@ -128,18 +141,33 @@ export default function TermosDeUso() {
         </h2>
 
         <p>
-          Reservamo-nos o direito de modificar estes Termos de Uso
-          a qualquer momento. Recomendamos a revisão periódica
-          desta página.
+          Estes Termos de Uso podem ser atualizados a qualquer momento
+          sem aviso prévio.
+        </p>
+
+        <p>
+          Recomendamos que o usuário revise esta página periodicamente.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          9. Contato
+          9. Legislação Aplicável
+        </h2>
+
+        <p>
+          Estes Termos de Uso são regidos pela legislação brasileira.
+        </p>
+
+        <h2 className="text-2xl font-semibold">
+          10. Contato
         </h2>
 
         <p>
           Em caso de dúvidas sobre estes Termos de Uso,
-          utilize a página de contato disponível no site.
+          acesse:
+        </p>
+
+        <p className="font-medium">
+          https://simuladorfgts.com.br/contato
         </p>
 
       </section>
