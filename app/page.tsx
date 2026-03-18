@@ -4,7 +4,7 @@ import AdsenseBlock from "@/components/AdsenseBlock"
 export const metadata = {
   title: "Simulador FGTS 2026 | Multa 40% e Saque-Aniversário",
   description:
-    "Use simuladores gratuitos de FGTS e entenda multa de 40%, saque-aniversário e quanto rende o FGTS por ano.",
+    "Simule FGTS, multa de 40% e saque-aniversário. Ferramentas gratuitas e guias completos atualizados para 2026.",
 }
 
 export default function HomePage() {
@@ -14,23 +14,21 @@ export default function HomePage() {
       {/* HERO */}
       <section className="mb-12">
         <h1 className="text-4xl font-bold mb-6 leading-tight">
-          Simulador FGTS 2026 e Guias Completos
+          Simulador FGTS 2026 e Guias Atualizados
         </h1>
 
         <p className="text-lg text-gray-700 mb-4">
-          Utilize nossos simuladores gratuitos para calcular valores
-          relacionados ao FGTS e entender melhor seus direitos
-          trabalhistas.
+          Calcule valores do FGTS de forma simples e rápida.
+          Utilize nossos simuladores gratuitos e entenda seus direitos trabalhistas.
         </p>
 
         <p className="text-gray-700">
-          O site oferece ferramentas para calcular multa de 40%,
-          saque-aniversário e conteúdos explicativos sobre como
-          funciona o Fundo de Garantia.
+          Disponibilizamos ferramentas para calcular multa de 40%, saque-aniversário
+          e conteúdos explicativos atualizados.
         </p>
       </section>
 
-      {/* SIMULADORES */}
+      {/* SIMULADORES (FOCO PRINCIPAL) */}
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-6">
           Simuladores de FGTS
@@ -43,11 +41,10 @@ export default function HomePage() {
             className="border rounded-xl p-6 hover:shadow-md transition"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Simulador Multa 40% FGTS
+              Multa de 40% do FGTS
             </h3>
             <p className="text-gray-600">
-              Calcule o valor estimado da multa de 40% do FGTS
-              em caso de demissão sem justa causa.
+              Calcule o valor da multa rescisória em caso de demissão sem justa causa.
             </p>
           </Link>
 
@@ -56,18 +53,17 @@ export default function HomePage() {
             className="border rounded-xl p-6 hover:shadow-md transition"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Simulador Saque-Aniversário
+              Saque-Aniversário FGTS
             </h3>
             <p className="text-gray-600">
-              Descubra quanto você pode sacar anualmente
-              escolhendo a modalidade saque-aniversário.
+              Descubra quanto você pode sacar todos os anos.
             </p>
           </Link>
 
         </div>
       </section>
 
-      {/* GUIAS IMPORTANTES */}
+      {/* GUIAS (SEO FORTE) */}
       <section className="mb-12">
 
         <h2 className="text-2xl font-semibold mb-6">
@@ -76,15 +72,15 @@ export default function HomePage() {
 
         <div className="space-y-3 text-blue-600">
 
-          <Link href="/fgts-rende-quanto-por-ano" className="block hover:underline">
-            Quanto rende o FGTS por ano?
+          <Link href="/blog/como-calcular-fgts" className="block hover:underline">
+            Como calcular FGTS passo a passo
           </Link>
 
-          <Link href="/como-calcular-fgts-de-demissao" className="block hover:underline">
-            Como calcular o FGTS na demissão
+          <Link href="/blog/fgts-demissao" className="block hover:underline">
+            FGTS na demissão: quanto você recebe
           </Link>
 
-          <Link href="/tabela-saque-aniversario-fgts-2026" className="block hover:underline">
+          <Link href="/blog/tabela-saque-aniversario-2026" className="block hover:underline">
             Tabela saque-aniversário FGTS 2026
           </Link>
 
@@ -97,7 +93,7 @@ export default function HomePage() {
         <AdsenseBlock />
       </div>
 
-      {/* CONTEÚDO */}
+      {/* CONTEÚDO (E-E-A-T) */}
       <section className="space-y-6 text-gray-800">
 
         <h2 className="text-2xl font-semibold">
@@ -105,19 +101,21 @@ export default function HomePage() {
         </h2>
 
         <p>
-          Os simuladores utilizam regras públicas conhecidas
-          do Fundo de Garantia do Tempo de Serviço (FGTS)
-          para gerar estimativas aproximadas.
+          Nossos simuladores utilizam regras públicas do FGTS para gerar estimativas
+          baseadas em depósitos mensais, saldo acumulado e percentuais oficiais.
         </p>
 
         <h2 className="text-2xl font-semibold">
-          Informação clara e responsável
+          Informações confiáveis
         </h2>
 
         <p>
-          Nosso objetivo é explicar de forma simples como
-          funcionam regras trabalhistas e financeiras,
-          facilitando o entendimento dos cálculos.
+          O conteúdo é baseado em regras oficiais divulgadas pelo governo e serve
+          como apoio educacional para trabalhadores que desejam entender melhor seus direitos.
+        </p>
+
+        <p className="text-sm text-gray-500">
+          Este site não possui vínculo com a Caixa Econômica Federal.
         </p>
 
       </section>
@@ -136,29 +134,31 @@ export default function HomePage() {
               Quanto rende o FGTS por ano?
             </h3>
             <p className="text-gray-700">
-              O FGTS rende 3% ao ano mais a distribuição
-              anual de lucros definida pelo governo.
+              O FGTS rende 3% ao ano mais distribuição de lucros.
+              Veja detalhes em{" "}
+              <Link href="/blog/fgts-rende-quanto-por-ano" className="text-blue-600 underline">
+                nosso guia completo
+              </Link>.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Quem tem direito à multa de 40%?
+              Quem recebe multa de 40%?
             </h3>
             <p className="text-gray-700">
-              Trabalhadores demitidos sem justa causa
-              recebem 40% sobre o saldo do FGTS.
+              Trabalhadores demitidos sem justa causa têm direito à multa
+              sobre o saldo do FGTS.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Vale a pena aderir ao saque-aniversário?
+              Saque-aniversário vale a pena?
             </h3>
             <p className="text-gray-700">
-              Depende da sua estratégia financeira,
-              pois ao aderir você perde o direito ao
-              saque total do FGTS em caso de demissão.
+              Depende do seu planejamento financeiro, pois reduz o valor disponível
+              em caso de demissão.
             </p>
           </div>
 
