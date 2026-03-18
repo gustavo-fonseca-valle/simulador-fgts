@@ -5,6 +5,8 @@ type PageProps = {
   params: { slug: string }
 }
 
+export const dynamic = "force-dynamic"
+
 export function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
