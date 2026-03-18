@@ -156,7 +156,7 @@ export default function BlogPostPage({ params }: PageProps) {
         {/* CONTEÚDO */}
         <section
           className="prose max-w-none text-gray-800 leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: post.content || "" }}
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* FAQ VISUAL */}
