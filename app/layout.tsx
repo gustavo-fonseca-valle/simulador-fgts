@@ -41,10 +41,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <head>
-        {/* Meta viewport para responsividade */}
+        {/* Meta viewport para mobile */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Fonts otimizadas */}
+        {/* Preload de fonte customizada */}
         <link
           rel="preload"
           href="/fonts/YourFont.woff2"
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
 
-        {/* Script AdSense: não bloqueia renderização */}
+        {/* Script AdSense */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5817280149271380"
@@ -77,11 +77,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="bg-gray-50 text-gray-900 antialiased">
-        {/* Header responsivo */}
+        {/* Header */}
         <Header />
 
-        {/* Conteúdo principal */}
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Conteúdo principal com padding responsivo */}
+        <main className="max-w-full sm:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {children}
         </main>
 
