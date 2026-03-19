@@ -2,10 +2,8 @@ import { notFound } from "next/navigation"
 import { posts } from "../../lib/posts"
 
 type PageProps = {
-  params: { slug: string }
+   params: Promise<{ slug: string }>
 }
-
-export const dynamic = "force-dynamic"
 
 export function generateStaticParams() {
   return posts.map((post) => ({
@@ -13,9 +11,12 @@ export function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }: PageProps) {
-  const { slug } = params
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params
   const post = posts.find((p) => p.slug === slug)
+
+  console.log("SLUG URL:", slug)
+  console.log("POSTS DISPONÍVEIS:", posts.map(p => p.slug))
 
   if (!post) {
     return {
@@ -29,8 +30,8 @@ export function generateMetadata({ params }: PageProps) {
   }
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const { slug } = params
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await params
   const post = posts.find((p) => p.slug === slug)
 
   if (!post) {

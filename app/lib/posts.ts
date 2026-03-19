@@ -178,6 +178,91 @@ export const posts: Post[] = [
       </div>
     `,
   },
+  {
+  slug: "fgts-rende-quanto-por-ano",
+  title: "FGTS rende quanto por ano em 2026? Veja o rendimento real",
+  description: "Descubra quanto rende o FGTS por ano e se vale a pena deixar o dinheiro parado na conta.",
+  date: "2026-03-11",
+  keywords: [
+    "fgts rende quanto",
+    "rendimento fgts 2026",
+    "fgts rende por ano",
+    "fgts vale a pena"
+  ],
+  content: `
+    <p>O FGTS rende cerca de <strong>3% ao ano + Taxa Referencial (TR)</strong>.</p>
+
+    <p>Na prática, isso significa um rendimento baixo comparado a outros investimentos.</p>
+
+    <h2>Exemplo de rendimento</h2>
+
+    <ul>
+      <li>Saldo: R$ 10.000</li>
+      <li>Rendimento anual: ~R$ 300</li>
+    </ul>
+
+    <h2>FGTS rende mais que poupança?</h2>
+
+    <p>Na maioria dos casos, o FGTS rende menos que a poupança e muito menos que investimentos como Tesouro Direto.</p>
+
+    <h2>Vale a pena deixar o dinheiro no FGTS?</h2>
+
+    <p>Depende da sua situação. Em geral, o FGTS não é considerado um bom investimento, mas sim uma reserva obrigatória.</p>
+
+    <div style="margin:20px 0;padding:20px;background:#ecfeff;">
+      👉 <a href="/simuladores"><strong>Simular rendimento do seu FGTS</strong></a>
+    </div>
+  `,
+},
+{
+  slug: "tabela-saque-aniversario-2026",
+  title: "Tabela saque-aniversário FGTS 2026: veja quanto você pode sacar",
+  description: "Confira a tabela oficial do saque-aniversário FGTS 2026 com valores, percentuais e exemplos práticos.",
+  date: "2026-03-12",
+  keywords: [
+    "tabela saque aniversario fgts 2026",
+    "fgts saque aniversario valores",
+    "quanto posso sacar fgts",
+    "fgts tabela oficial"
+  ],
+  content: `
+    <p>O saque-aniversário permite retirar parte do saldo do FGTS todos os anos.</p>
+
+    <h2>Tabela oficial do FGTS 2026</h2>
+
+    <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%">
+      <tr>
+        <th>Saldo</th>
+        <th>Alíquota</th>
+        <th>Parcela adicional</th>
+      </tr>
+      <tr><td>Até R$ 500</td><td>50%</td><td>-</td></tr>
+      <tr><td>De R$ 500,01 a R$ 1.000</td><td>40%</td><td>R$ 50</td></tr>
+      <tr><td>De R$ 1.000,01 a R$ 5.000</td><td>30%</td><td>R$ 150</td></tr>
+      <tr><td>De R$ 5.000,01 a R$ 10.000</td><td>20%</td><td>R$ 650</td></tr>
+      <tr><td>De R$ 10.000,01 a R$ 15.000</td><td>15%</td><td>R$ 1.150</td></tr>
+      <tr><td>De R$ 15.000,01 a R$ 20.000</td><td>10%</td><td>R$ 1.900</td></tr>
+      <tr><td>Acima de R$ 20.000</td><td>5%</td><td>R$ 2.900</td></tr>
+    </table>
+
+    <h2>Como calcular</h2>
+
+    <p>Você aplica a alíquota sobre o saldo e soma a parcela adicional.</p>
+
+    <p><strong>Exemplo:</strong></p>
+    <ul>
+      <li>Saldo: R$ 3.000</li>
+      <li>30% = R$ 900</li>
+      <li>+ R$ 150</li>
+    </ul>
+
+    <p><strong>Total: R$ 1.050</strong></p>
+
+    <div style="margin:20px 0;padding:20px;background:#ecfeff;">
+      👉 <a href="/simuladores"><strong>Simular meu saque-aniversário</strong></a>
+    </div>
+  `,
+},
 ]
 
 /**
