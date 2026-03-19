@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation"
 import { posts } from "../../lib/posts"
+import AdsenseBlock from "@/components/AdsenseBlock"
+import Link from "next/link"
 
 type PageProps = {
-   params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>
 }
 
 export function generateStaticParams() {
@@ -14,9 +16,6 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params
   const post = posts.find((p) => p.slug === slug)
-
-  console.log("SLUG URL:", slug)
-  console.log("POSTS DISPONÍVEIS:", posts.map(p => p.slug))
 
   if (!post) {
     return {
@@ -40,9 +39,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const url = `https://www.simuladorfgts.com.br/blog/${post.slug}`
 
+  // 🔥 SPLIT DO CONTEÚDO PRA INSERIR ANÚNCIO NO MEIO
+  const contentParts = post.content.split("</p>")
+
   return (
     <main className="max-w-3xl mx-auto px-6 py-12">
-      {/* 🔥 SCHEMA: Article */}
+
+      {/* SCHEMA: Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -66,72 +69,14 @@ export default async function BlogPostPage({ params }: PageProps) {
         }}
       />
 
-      {/* 🔥 SCHEMA: Breadcrumb */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.simuladorfgts.com.br",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Blog",
-                item: "https://www.simuladorfgts.com.br/blog",
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: post.title,
-                item: url,
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* 🔥 SCHEMA: FAQ */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Quanto é o FGTS por mês?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "O FGTS corresponde a 8% do salário bruto do trabalhador.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Posso sacar o FGTS na demissão?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sim, na demissão sem justa causa é possível sacar o saldo total.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-
-      {/* Breadcrumb visual */}
+      {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6">
-        <a href="/">Home</a> › <a href="/blog">Blog</a> › {post.title}
+        <Link href="/">Home</Link> › <Link href="/blog">Blog</Link> › {post.title}
       </nav>
 
       <article>
+
+        {/* HEADER */}
         <header className="mb-10">
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 
@@ -140,29 +85,49 @@ export default async function BlogPostPage({ params }: PageProps) {
           </p>
 
           <p className="text-gray-600 mt-4">{post.description}</p>
+
+          {/* 🔥 ANÚNCIO TOPO */}
+          <div className="mt-6">
+            <AdsenseBlock />
+          </div>
         </header>
 
-        {/* CTA SIMULADOR */}
+        {/* CTA */}
         <div className="my-8 p-6 bg-green-50 rounded-xl text-center">
           <p className="font-semibold mb-3">
             Quer saber quanto você tem de FGTS?
           </p>
 
-          <a
+          <Link
             href="/simuladores"
             className="bg-green-600 text-white px-6 py-3 rounded-lg font-bold"
           >
             Simular FGTS agora
-          </a>
+          </Link>
         </div>
 
-        {/* CONTEÚDO */}
-        <section
-          className="prose max-w-none text-gray-800 leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        {/* CONTEÚDO COM ANÚNCIO NO MEIO */}
+        <section className="prose max-w-none text-gray-800 leading-relaxed">
+          {contentParts.map((part, index) => (
+            <div key={index}>
+              <div dangerouslySetInnerHTML={{ __html: part + "</p>" }} />
 
-        {/* FAQ VISUAL */}
+              {/* 🔥 ANÚNCIO NO MEIO (após 2º parágrafo) */}
+              {index === 2 && (
+                <div className="my-8">
+                  <AdsenseBlock />
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+
+        {/* 🔥 ANÚNCIO FINAL */}
+        <div className="mt-10">
+          <AdsenseBlock />
+        </div>
+
+        {/* FAQ */}
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Perguntas frequentes</h2>
 
@@ -175,23 +140,27 @@ export default async function BlogPostPage({ params }: PageProps) {
           <p>Sim, na demissão sem justa causa.</p>
         </div>
 
-        {/* ARTIGOS RELACIONADOS */}
+        {/* RELACIONADOS */}
         <div className="mt-12">
           <h3 className="text-xl font-bold mb-4">Leia também</h3>
 
           <ul className="space-y-2">
-            {posts.slice(0, 3).map((p) => (
-              <li key={p.slug}>
-                <a
-                  href={`/blog/${p.slug}`}
-                  className="text-blue-600 hover:underline"
-                >
-                  {p.title}
-                </a>
-              </li>
-            ))}
+            {posts
+              .filter((p) => p.slug !== post.slug)
+              .slice(0, 3)
+              .map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/blog/${p.slug}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    {p.title}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
+
       </article>
     </main>
   )
