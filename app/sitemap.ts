@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
 
-    // 🔹 Simuladores
+    // 🔹 Simuladores fixos
     {
       url: `${BASE_URL}/simuladores/multa-40`,
       lastModified: now,
@@ -46,35 +46,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
-
-    // 🔹 Guias FGTS
     {
-      url: `${BASE_URL}/tabela-saque-aniversario-fgts-2026`,
+      url: `${BASE_URL}/simuladores/fgts`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/fgts-rende-quanto-por-ano`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/como-calcular-fgts-de-demissao`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
   ]
 
-  // 🔹 Posts automáticos
-  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+  // 🔹 Posts + Guias FGTS dinâmicos
+  const dynamicPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
+    lastModified: new Date(post.date), // usa a data de publicação do post
+    changeFrequency: "monthly",
     priority: 0.8,
   }))
 
-  return [...staticPages, ...blogPages]
+  return [...staticPages, ...dynamicPages]
 }
