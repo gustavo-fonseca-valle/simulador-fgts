@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main className="max-w-full sm:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main className="max-w-screen-sm sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
       {/* HERO */}
       <section className="mb-12">
@@ -18,13 +18,11 @@ export default function HomePage() {
         </h1>
 
         <p className="text-lg text-gray-700 mb-4">
-          Calcule valores do FGTS de forma simples e rápida.
-          Utilize nossos simuladores gratuitos e entenda seus direitos trabalhistas.
+          Calcule valores do FGTS de forma simples e rápida. Utilize nossos simuladores gratuitos e entenda seus direitos trabalhistas.
         </p>
 
         <p className="text-gray-700">
-          Disponibilizamos ferramentas para calcular multa de 40%, saque-aniversário
-          e conteúdos explicativos atualizados. Tudo baseado em regras oficiais.
+          Disponibilizamos ferramentas para calcular multa de 40%, saque-aniversário e conteúdos explicativos atualizados. Tudo baseado em regras oficiais.
         </p>
       </section>
 
@@ -72,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* ANÚNCIO */}
-      <div className="my-12 min-h-[100px]">
+      <div className="my-12 min-h-[120px]">
         <AdsenseBlock />
       </div>
 
@@ -80,14 +78,12 @@ export default function HomePage() {
       <section className="space-y-6 text-gray-800">
         <h2 className="text-2xl font-semibold">Como funcionam nossos simuladores?</h2>
         <p>
-          Nossos simuladores utilizam regras públicas do FGTS para gerar estimativas
-          baseadas em depósitos mensais, saldo acumulado e percentuais oficiais.
+          Nossos simuladores utilizam regras públicas do FGTS para gerar estimativas baseadas em depósitos mensais, saldo acumulado e percentuais oficiais.
         </p>
 
         <h2 className="text-2xl font-semibold">Informações confiáveis</h2>
         <p>
-          O conteúdo é baseado em regras oficiais divulgadas pelo governo e serve
-          como apoio educacional para trabalhadores que desejam entender melhor seus direitos.
+          O conteúdo é baseado em regras oficiais divulgadas pelo governo e serve como apoio educacional para trabalhadores que desejam entender melhor seus direitos.
         </p>
 
         <p className="text-sm text-gray-500">
@@ -121,8 +117,7 @@ export default function HomePage() {
           <div>
             <h3 className="font-semibold">Saque-aniversário vale a pena?</h3>
             <p className="text-gray-700">
-              Depende do seu planejamento financeiro, pois reduz o valor disponível
-              em caso de demissão.
+              Depende do seu planejamento financeiro, pois reduz o valor disponível em caso de demissão.
             </p>
           </div>
         </div>

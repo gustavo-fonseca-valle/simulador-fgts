@@ -41,10 +41,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <head>
-        {/* Meta viewport para mobile */}
+        {/* Meta viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Preload de fonte customizada */}
+        {/* Preload de fonte leve */}
         <link
           rel="preload"
           href="/fonts/YourFont.woff2"
@@ -77,15 +77,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body className="bg-gray-50 text-gray-900 antialiased">
-        {/* Header */}
         <Header />
 
-        {/* Conteúdo principal com padding responsivo */}
-        <main className="max-w-full sm:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Conteúdo principal */}
+        <main className="max-w-screen-sm sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {children}
         </main>
 
-        {/* Footer */}
         <Footer />
       </body>
     </html>
