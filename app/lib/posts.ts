@@ -47,108 +47,108 @@ export const posts: Post[] = [
   ],
   content: `
 
-    <p>Se você foi demitido ou está prestes a sair do trabalho, provavelmente quer saber: <strong>quanto vou receber de FGTS?</strong></p>
+      <p><strong>Na demissão sem justa causa, você recebe:</strong></p>
 
-    <p>A resposta depende do tipo de demissão, mas em muitos casos você pode sacar um valor significativo.</p>
+  <ul>
+    <li>✔️ Todo o saldo do FGTS</li>
+    <li>✔️ + multa de 40% sobre o valor</li>
+  </ul>
 
-    <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
-      👉 <a href="/simuladores"><strong>Calcule agora quanto você vai receber</strong></a>
-    </div>
+  <p>Ou seja, quanto maior o saldo acumulado, maior será o valor que você vai receber.</p>
 
-    <h2>Quanto você recebe de FGTS na demissão?</h2>
+  <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
+    👉 <a href="/simuladores"><strong>Calcule agora quanto você vai receber na demissão</strong></a>
+  </div>
 
-    <p>Na <strong>demissão sem justa causa</strong>, você recebe:</p>
+  <h2>Exemplos reais de quanto você recebe</h2>
 
-    <ul>
-      <li>✔️ Todo o saldo do FGTS</li>
-      <li>✔️ + multa de 40% sobre o valor</li>
-    </ul>
+  <ul>
+    <li>Saldo: R$ 5.000 → <strong>R$ 7.000</strong></li>
+    <li>Saldo: R$ 10.000 → <strong>R$ 14.000</strong></li>
+    <li>Saldo: R$ 20.000 → <strong>R$ 28.000</strong></li>
+  </ul>
 
-    <h2>Exemplo prático de cálculo</h2>
+  <p>Esses valores incluem o saldo + multa de 40%.</p>
 
-    <div style="background:#f9fafb;padding:16px;border-radius:8px;">
-      <p><strong>Saldo no FGTS:</strong> R$ 10.000</p>
-      <p><strong>Multa de 40%:</strong> R$ 4.000</p>
-      <p><strong>Total que você recebe:</strong> R$ 14.000</p>
-    </div>
+  <h2>Como calcular o FGTS na demissão</h2>
 
-    <p>Ou seja, quanto maior o saldo acumulado, maior será o valor recebido na demissão.</p>
+  <p>O cálculo é simples:</p>
 
-    <h2>Tipos de demissão e o que você recebe</h2>
+  <pre>saldo do FGTS × 0,4</pre>
 
-    <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%">
-      <tr>
-        <th>Tipo de demissão</th>
-        <th>Pode sacar FGTS?</th>
-        <th>Multa</th>
-      </tr>
-      <tr>
-        <td>Sem justa causa</td>
-        <td>Sim (100%)</td>
-        <td>40%</td>
-      </tr>
-      <tr>
-        <td>Pedido de demissão</td>
-        <td>Não</td>
-        <td>Não</td>
-      </tr>
-      <tr>
-        <td>Acordo trabalhista</td>
-        <td>Sim (parcial)</td>
-        <td>20%</td>
-      </tr>
-    </table>
+  <p>Depois, você soma o valor da multa ao saldo total.</p>
 
-    <h2>Como calcular a multa de 40% do FGTS</h2>
+  <p><strong>Exemplo:</strong></p>
 
-    <p>A multa é calculada de forma simples:</p>
+  <ul>
+    <li>Saldo: R$ 8.000</li>
+    <li>Multa: R$ 3.200</li>
+  </ul>
 
-    <pre>saldo do FGTS × 0,4</pre>
+  <p><strong>Total recebido: R$ 11.200</strong></p>
 
-    <p><strong>Exemplo:</strong></p>
+  <h2>Tipos de demissão e o que você recebe</h2>
 
-    <ul>
-      <li>Saldo: R$ 8.000</li>
-      <li>Multa: R$ 3.200</li>
-    </ul>
+  <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%">
+    <tr>
+      <th>Tipo de demissão</th>
+      <th>FGTS</th>
+      <th>Multa</th>
+    </tr>
+    <tr>
+      <td>✔️ Sem justa causa</td>
+      <td>Saque total</td>
+      <td>40%</td>
+    </tr>
+    <tr>
+      <td>❌ Pedido de demissão</td>
+      <td>Não pode sacar</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <td>⚠️ Acordo trabalhista</td>
+      <td>Saque parcial</td>
+      <td>20%</td>
+    </tr>
+  </table>
 
-    <p><strong>Total: R$ 11.200</strong></p>
+  <h2>E se você estiver no saque-aniversário?</h2>
 
-    <h2>O que acontece se você aderiu ao saque-aniversário?</h2>
+  <p>Se você aderiu ao saque-aniversário, as regras mudam:</p>
 
-    <p>Se você optou pelo saque-aniversário, a regra muda:</p>
+  <ul>
+    <li>❌ Não pode sacar o saldo total</li>
+    <li>✔️ Recebe apenas a multa de 40%</li>
+  </ul>
 
-    <ul>
-      <li>❌ Não pode sacar o saldo total</li>
-      <li>✔️ Recebe apenas a multa de 40%</li>
-    </ul>
+  <p>👉 <a href="/simuladores/saque-aniversario"><strong>Veja quanto você pode sacar no saque-aniversário</strong></a></p>
 
-    <p>👉 <a href="/simuladores/saque-aniversario"><strong>Veja quanto você pode sacar no saque-aniversário</strong></a></p>
+  <h2>Vale a pena sacar o FGTS na demissão?</h2>
 
-    <h2>Vale a pena sacar o FGTS na demissão?</h2>
+  <p>Na maioria dos casos, sim.</p>
 
-    <p>Sim, na maioria dos casos. O FGTS tem rendimento baixo, então sacar pode ser uma boa decisão para:</p>
+  <p>O FGTS tem rendimento baixo, então pode ser mais vantajoso usar o dinheiro para:</p>
 
-    <ul>
-      <li>Quitar dívidas</li>
-      <li>Investir</li>
-      <li>Montar reserva de emergência</li>
-    </ul>
+  <ul>
+    <li>Pagar dívidas</li>
+    <li>Investir</li>
+    <li>Montar uma reserva de emergência</li>
+  </ul>
 
-    <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
-      👉 <a href="/simuladores"><strong>Simular quanto você vai receber agora</strong></a>
-    </div>
+  <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+    👉 <a href="/simuladores"><strong>Simular quanto você vai receber agora</strong></a>
+  </div>
 
-    <h2>Perguntas frequentes</h2>
+  <h2>Perguntas frequentes</h2>
 
-    <h3>Quem pede demissão pode sacar o FGTS?</h3>
-    <p>Não. Nesse caso, o saldo permanece na conta.</p>
+  <h3>Quem pede demissão pode sacar o FGTS?</h3>
+  <p>Não. Nesse caso, o valor permanece na conta.</p>
 
-    <h3>Quando posso sacar o FGTS após a demissão?</h3>
-    <p>Normalmente após a empresa informar a rescisão e liberar o saque.</p>
+  <h3>Quando o FGTS é liberado?</h3>
+  <p>Após a empresa comunicar a rescisão e liberar o saque.</p>
 
-    <h3>A multa de 40% é sobre o quê?</h3>
-    <p>É calculada sobre todo o saldo acumulado do FGTS durante o contrato.</p>
+  <h3>A multa de 40% é obrigatória?</h3>
+  <p>Sim, em casos de demissão sem justa causa.</p>
 
   `,
 },
