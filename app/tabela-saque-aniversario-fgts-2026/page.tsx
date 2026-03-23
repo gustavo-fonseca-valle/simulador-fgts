@@ -32,49 +32,69 @@ export default function TabelaSaqueAniversarioPage() {
         Tabela oficial do saque-aniversário FGTS 2026
       </h2>
 
-      <div className="overflow-x-auto mb-8">
-        <table className="min-w-full bg-white rounded-lg shadow-md border border-gray-200">
-          <thead className="bg-blue-600 text-white">
-            <tr>
-              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
-                Faixa de saldo (R$)
-              </th>
-              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
-                Alíquota
-              </th>
-              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
-                Parcela adicional
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {[
-              ["Até 500", "50%", "—"],
-              ["De 500,01 até 1.000", "40%", "R$ 50"],
-              ["De 1.000,01 até 5.000", "30%", "R$ 150"],
-              ["De 5.000,01 até 10.000", "20%", "R$ 650"],
-              ["De 10.000,01 até 15.000", "15%", "R$ 1.150"],
-              ["De 15.000,01 até 20.000", "10%", "R$ 1.900"],
-              ["Acima de 20.000", "5%", "R$ 2.900"],
-            ].map((row, idx) => (
-              <tr
-                key={idx}
-                className="hover:bg-blue-50 transition-colors duration-200"
-              >
-                {row.map((cell, cellIdx) => (
-                  <td
-                    key={cellIdx}
-                    className={`px-4 py-3 text-gray-800 ${
-                      idx === 6 ? "font-semibold text-blue-700" : ""
-                    }`}
-                  >
-                    {cell}
-                  </td>
-                ))}
+      <div className="mb-8">
+        {/* Desktop Table */}
+        <div className="hidden md:block overflow-x-auto">
+          <table className="table-auto w-full bg-white rounded-lg shadow-md border border-gray-300">
+            <thead className="bg-indigo-600 text-white">
+              <tr>
+                <th className="px-4 py-3 text-left font-semibold">Faixa de saldo (R$)</th>
+                <th className="px-4 py-3 text-left font-semibold">Alíquota</th>
+                <th className="px-4 py-3 text-left font-semibold">Parcela adicional</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              {[
+                ["Até 500", "50%", "—"],
+                ["De 500,01 até 1.000", "40%", "R$ 50"],
+                ["De 1.000,01 até 5.000", "30%", "R$ 150"],
+                ["De 5.000,01 até 10.000", "20%", "R$ 650"],
+                ["De 10.000,01 até 15.000", "15%", "R$ 1.150"],
+                ["De 15.000,01 até 20.000", "10%", "R$ 1.900"],
+                ["Acima de 20.000", "5%", "R$ 2.900"],
+              ].map((row, idx) => (
+                <tr key={idx} className="hover:bg-indigo-50 transition-colors duration-200">
+                  {row.map((cell, cIdx) => (
+                    <td
+                      key={cIdx}
+                      className={`px-4 py-3 text-gray-800 ${idx === 6 ? "font-bold text-blue-700" : ""}`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile Cards */}
+        <div className="md:hidden space-y-4">
+          {[
+            ["Até 500", "50%", "—"],
+            ["De 500,01 até 1.000", "40%", "R$ 50"],
+            ["De 1.000,01 até 5.000", "30%", "R$ 150"],
+            ["De 5.000,01 até 10.000", "20%", "R$ 650"],
+            ["De 10.000,01 até 15.000", "15%", "R$ 1.150"],
+            ["De 15.000,01 até 20.000", "10%", "R$ 1.900"],
+            ["Acima de 20.000", "5%", "R$ 2.900"],
+          ].map((row, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-lg shadow-md border border-gray-200 p-4 hover:bg-indigo-50 transition-colors"
+            >
+              <p className="font-semibold text-gray-700 mb-1">
+                Faixa de saldo: <span className={idx === 6 ? "text-blue-700 font-bold" : ""}>{row[0]}</span>
+              </p>
+              <p className="mb-1">
+                Alíquota: <span className={idx === 6 ? "text-blue-700 font-bold" : ""}>{row[1]}</span>
+              </p>
+              <p>
+                Parcela adicional: <span className={idx === 6 ? "text-blue-700 font-bold" : ""}>{row[2]}</span>
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <h2 className="text-2xl font-semibold mb-4">
