@@ -47,10 +47,17 @@ export default function SaqueAniversarioForm() {
 
   return (
     <section className="bg-gray-50 p-6 rounded-xl shadow-sm mb-10">
+
+      {/* TÍTULO */}
+      <h2 className="text-xl font-semibold mb-4">
+        Calcule seu saque-aniversário do FGTS
+      </h2>
+
+      {/* FORM */}
       <form onSubmit={calcularSaque} className="space-y-4">
         <div>
           <label className="block mb-2 font-medium">
-            Informe o saldo total do FGTS (R$):
+            Informe seu saldo total do FGTS (R$):
           </label>
           <input
             type="number"
@@ -66,20 +73,44 @@ export default function SaqueAniversarioForm() {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+          className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
         >
-          Calcular Saque
+          Calcular agora
         </button>
       </form>
 
+      {/* RESULTADO */}
       {resultado !== null && (
-        <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-lg font-semibold">
-            Valor estimado do saque:
+        <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl text-center">
+
+          <p className="text-lg font-medium mb-2">
+            💰 Você pode sacar aproximadamente:
           </p>
-          <p className="text-2xl font-bold text-green-700">
+
+          <p className="text-3xl font-bold text-green-700 mb-4">
             R$ {resultado.toFixed(2)}
           </p>
+
+          <p className="text-sm text-gray-600 mb-4">
+            Valor estimado com base nas regras atuais do FGTS.
+          </p>
+
+          {/* CTA INTERNO */}
+          <div className="space-y-2">
+            <a
+              href="/tabela-saque-aniversario-fgts-2026"
+              className="block text-blue-600 underline font-medium"
+            >
+              Ver tabela completa do saque-aniversário
+            </a>
+
+            <a
+              href="/blog/fgts-demissao"
+              className="block text-blue-600 underline font-medium"
+            >
+              Entenda quanto você recebe na demissão
+            </a>
+          </div>
         </div>
       )}
     </section>
