@@ -568,21 +568,102 @@ export const posts: Post[] = [
 
   {
     slug: "fgts-quanto-recebo-demissao",
-    title: "Quanto vou receber de FGTS na demissão?",
-    description: "Veja quanto você recebe ao ser demitido sem justa causa.",
+    title: "Quanto vou receber de FGTS na demissão? (cálculo completo 2026)",
+    description: "Descubra quanto você recebe de FGTS na demissão sem justa causa, com exemplos reais e cálculo da multa de 40%.",
     date: "2026-03-01",
-    keywords: ["fgts demissao quanto recebo"],
+    keywords: ["fgts demissao quanto recebo", "quanto recebo fgts demissão"],
     content: `
-      <p>Você recebe:</p>
+
+      <p>Se você foi demitido ou está prestes a sair do emprego, provavelmente quer saber: <strong>quanto vou receber de FGTS?</strong></p>
+
+      <h2>Quanto você recebe de FGTS na demissão?</h2>
+
+      <p>Na <strong>demissão sem justa causa</strong>, você recebe:</p>
 
       <ul>
-        <li>Saldo total</li>
-        <li>+ 40% de multa</li>
+        <li>✔️ Todo o saldo do FGTS</li>
+        <li>✔️ + multa de 40% sobre o valor</li>
       </ul>
 
-      <div style="margin:20px 0;">
-        👉 <a href="/simuladores"><strong>Simular agora</strong></a>
+      <p>Ou seja, quanto maior o saldo acumulado, maior será o valor total que você vai receber.</p>
+
+      <h2>Exemplo prático</h2>
+
+      <div style="background:#f9fafb;padding:16px;border-radius:8px;">
+        <p><strong>Saldo no FGTS:</strong> R$ 10.000</p>
+        <p><strong>Multa de 40%:</strong> R$ 4.000</p>
+        <p><strong>Total recebido:</strong> R$ 14.000</p>
       </div>
+
+      <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Calcular quanto vou receber agora</strong></a>
+      </div>
+
+      <h2>Como calcular o valor do FGTS na demissão</h2>
+
+      <p>O cálculo é simples:</p>
+
+      <pre>Saldo do FGTS + (Saldo × 0,4)</pre>
+
+      <p>Exemplo:</p>
+
+      <ul>
+        <li>Saldo: R$ 8.000</li>
+        <li>Multa: R$ 3.200</li>
+        <li><strong>Total: R$ 11.200</strong></li>
+      </ul>
+
+      <h2>Tipos de demissão e quanto você recebe</h2>
+
+      <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%">
+        <tr>
+          <th>Tipo</th>
+          <th>FGTS</th>
+          <th>Multa</th>
+        </tr>
+        <tr>
+          <td>Sem justa causa</td>
+          <td>Saque total</td>
+          <td>40%</td>
+        </tr>
+        <tr>
+          <td>Pedido de demissão</td>
+          <td>Não pode sacar</td>
+          <td>Não</td>
+        </tr>
+        <tr>
+          <td>Acordo trabalhista</td>
+          <td>Saque parcial</td>
+          <td>20%</td>
+        </tr>
+      </table>
+
+      <h2>E se você estiver no saque-aniversário?</h2>
+
+      <p>Se você optou pelo saque-aniversário:</p>
+
+      <ul>
+        <li>❌ Não pode sacar o saldo total</li>
+        <li>✔️ Recebe apenas a multa de 40%</li>
+      </ul>
+
+      <p>👉 <a href="/simuladores/saque-aniversario"><strong>Simular saque-aniversário</strong></a></p>
+
+      <h2>Quando o FGTS é liberado?</h2>
+
+      <p>O saque geralmente é liberado após a empresa comunicar a rescisão, podendo levar alguns dias.</p>
+
+      <h2>Perguntas frequentes</h2>
+
+      <h3>Quem pede demissão recebe FGTS?</h3>
+      <p>Não. O valor permanece na conta.</p>
+
+      <h3>A multa de 40% é obrigatória?</h3>
+      <p>Sim, em demissões sem justa causa.</p>
+
+      <h3>Posso sacar tudo imediatamente?</h3>
+      <p>Depende da liberação da empresa e da Caixa.</p>
+
     `,
   },
   {
