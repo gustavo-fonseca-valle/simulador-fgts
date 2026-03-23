@@ -12,14 +12,15 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
         {/* 🔥 LOGO */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Simulador FGTS"
-            width={36}
-            height={36}
+            width={48}
+            height={48}
+            className="object-contain"
           />
-          <span className="font-bold text-lg text-gray-900">
+          <span className="font-bold text-xl text-gray-900">
             Simulador FGTS
           </span>
         </Link>
