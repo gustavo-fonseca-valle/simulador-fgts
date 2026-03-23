@@ -35,27 +35,123 @@ export const posts: Post[] = [
   },
 
   {
-    slug: "fgts-demissao",
-    title: "FGTS na demissão: quanto você recebe?",
-    description: "Veja como calcular o saldo do FGTS e a multa de 40% na demissão sem justa causa.",
-    date: "2026-03-01",
-    keywords: ["fgts demissão", "multa 40 fgts"],
-    content: `
-      <p>Na demissão sem justa causa, você pode sacar todo o FGTS + multa de 40%.</p>
+  slug: "fgts-demissao",
+  title: "FGTS na demissão: quanto você recebe + cálculo completo (2026)",
+  description: "Descubra quanto você recebe de FGTS na demissão sem justa causa, incluindo multa de 40%, exemplos reais e cálculo completo.",
+  date: "2026-03-01",
+  keywords: [
+    "fgts demissão quanto recebo",
+    "multa 40 fgts cálculo",
+    "quanto recebo fgts demissão",
+    "fgts rescisão valor"
+  ],
+  content: `
 
-      <h2>Exemplo</h2>
-      <ul>
-        <li>Saldo: R$ 10.000</li>
-        <li>Multa: R$ 4.000</li>
-      </ul>
+    <p>Se você foi demitido ou está prestes a sair do trabalho, provavelmente quer saber: <strong>quanto vou receber de FGTS?</strong></p>
 
-      <p><strong>Total: R$ 14.000</strong></p>
+    <p>A resposta depende do tipo de demissão, mas em muitos casos você pode sacar um valor significativo.</p>
 
-      <div style="margin:20px 0;padding:20px;background:#fef3c7;">
-        👉 <a href="/simuladores"><strong>Calcular rescisão</strong></a>
-      </div>
-    `,
-  },
+    <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
+      👉 <a href="/simuladores"><strong>Calcule agora quanto você vai receber</strong></a>
+    </div>
+
+    <h2>Quanto você recebe de FGTS na demissão?</h2>
+
+    <p>Na <strong>demissão sem justa causa</strong>, você recebe:</p>
+
+    <ul>
+      <li>✔️ Todo o saldo do FGTS</li>
+      <li>✔️ + multa de 40% sobre o valor</li>
+    </ul>
+
+    <h2>Exemplo prático de cálculo</h2>
+
+    <div style="background:#f9fafb;padding:16px;border-radius:8px;">
+      <p><strong>Saldo no FGTS:</strong> R$ 10.000</p>
+      <p><strong>Multa de 40%:</strong> R$ 4.000</p>
+      <p><strong>Total que você recebe:</strong> R$ 14.000</p>
+    </div>
+
+    <p>Ou seja, quanto maior o saldo acumulado, maior será o valor recebido na demissão.</p>
+
+    <h2>Tipos de demissão e o que você recebe</h2>
+
+    <table border="1" cellpadding="8" style="border-collapse:collapse;width:100%">
+      <tr>
+        <th>Tipo de demissão</th>
+        <th>Pode sacar FGTS?</th>
+        <th>Multa</th>
+      </tr>
+      <tr>
+        <td>Sem justa causa</td>
+        <td>Sim (100%)</td>
+        <td>40%</td>
+      </tr>
+      <tr>
+        <td>Pedido de demissão</td>
+        <td>Não</td>
+        <td>Não</td>
+      </tr>
+      <tr>
+        <td>Acordo trabalhista</td>
+        <td>Sim (parcial)</td>
+        <td>20%</td>
+      </tr>
+    </table>
+
+    <h2>Como calcular a multa de 40% do FGTS</h2>
+
+    <p>A multa é calculada de forma simples:</p>
+
+    <pre>saldo do FGTS × 0,4</pre>
+
+    <p><strong>Exemplo:</strong></p>
+
+    <ul>
+      <li>Saldo: R$ 8.000</li>
+      <li>Multa: R$ 3.200</li>
+    </ul>
+
+    <p><strong>Total: R$ 11.200</strong></p>
+
+    <h2>O que acontece se você aderiu ao saque-aniversário?</h2>
+
+    <p>Se você optou pelo saque-aniversário, a regra muda:</p>
+
+    <ul>
+      <li>❌ Não pode sacar o saldo total</li>
+      <li>✔️ Recebe apenas a multa de 40%</li>
+    </ul>
+
+    <p>👉 <a href="/simuladores/saque-aniversario"><strong>Veja quanto você pode sacar no saque-aniversário</strong></a></p>
+
+    <h2>Vale a pena sacar o FGTS na demissão?</h2>
+
+    <p>Sim, na maioria dos casos. O FGTS tem rendimento baixo, então sacar pode ser uma boa decisão para:</p>
+
+    <ul>
+      <li>Quitar dívidas</li>
+      <li>Investir</li>
+      <li>Montar reserva de emergência</li>
+    </ul>
+
+    <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+      👉 <a href="/simuladores"><strong>Simular quanto você vai receber agora</strong></a>
+    </div>
+
+    <h2>Perguntas frequentes</h2>
+
+    <h3>Quem pede demissão pode sacar o FGTS?</h3>
+    <p>Não. Nesse caso, o saldo permanece na conta.</p>
+
+    <h3>Quando posso sacar o FGTS após a demissão?</h3>
+    <p>Normalmente após a empresa informar a rescisão e liberar o saque.</p>
+
+    <h3>A multa de 40% é sobre o quê?</h3>
+    <p>É calculada sobre todo o saldo acumulado do FGTS durante o contrato.</p>
+
+  `,
+},
 
   // =========================
   // 🔥 ARTIGOS DE LONG TAIL (SEO FORTE)
