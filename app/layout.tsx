@@ -41,19 +41,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <head>
-        {/* Meta viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Preload de fonte leve */}
-        <link
-          rel="preload"
-          href="/fonts/YourFont.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* 🔥 FAVICON (IMPORTANTE PRA CONFIANÇA) */}
+        <link rel="icon" href="/favicon.ico" />
 
-        {/* Script AdSense */}
+        {/* 🔥 GOOGLE ADSENSE */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5817280149271380"
@@ -61,7 +54,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           strategy="afterInteractive"
         />
 
-        {/* Structured data */}
+        {/* 🔥 STRUCTURED DATA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -70,21 +63,69 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@type": "WebSite",
               name: "Simulador FGTS",
               url: "https://simuladorfgts.com.br",
-              description:
-                "Simuladores e guias completos sobre FGTS, multa de 40% e saque-aniversário.",
             }),
           }}
         />
       </head>
+
       <body className="bg-gray-50 text-gray-900 antialiased">
+
         <Header />
 
-        {/* Conteúdo principal */}
-        <main className="max-w-screen-sm sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {children}
+        {/* 🔥 ÁREA PRINCIPAL (MAIS LARGA E PROFISSIONAL) */}
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+          {/* 🔥 ESPAÇO PARA ANÚNCIO TOPO (OPCIONAL FUTURO) */}
+          {/* <div className="mb-6">
+            <AdsenseBlock />
+          </div> */}
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            {/* 🔥 CONTEÚDO PRINCIPAL */}
+            <div className="lg:col-span-2">
+              {children}
+            </div>
+
+            {/* 🔥 SIDEBAR (OURO PRO ADSENSE) */}
+            <aside className="hidden lg:block space-y-6">
+
+              {/* Anúncio */}
+              <div className="bg-white p-4 rounded-xl shadow-sm">
+                {/* <AdsenseBlock /> */}
+              </div>
+
+              {/* Links internos (SEO + retenção) */}
+              <div className="bg-white p-4 rounded-xl shadow-sm">
+                <h3 className="font-semibold mb-3">
+                  🔥 Simuladores populares
+                </h3>
+
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <a href="/simuladores/multa-40" className="hover:underline">
+                      Multa de 40% do FGTS
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/simuladores/fgts" className="hover:underline">
+                      Calcular FGTS
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/simuladores/saque-aniversario" className="hover:underline">
+                      Saque-Aniversário
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </aside>
+          </div>
         </main>
 
         <Footer />
+
       </body>
     </html>
   )
