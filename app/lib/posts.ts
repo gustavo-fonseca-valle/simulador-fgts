@@ -333,18 +333,98 @@ export const posts: Post[] = [
 
   {
     slug: "fgts-multa-40-calculo",
-    title: "Como calcular a multa de 40% do FGTS",
-    description: "Aprenda a calcular a multa rescisória do FGTS.",
+    title: "Como calcular a multa de 40% do FGTS (guia completo 2026)",
+    description: "Aprenda como calcular a multa de 40% do FGTS com exemplos reais, regras atualizadas e situações como saque-aniversário e acordo trabalhista.",
     date: "2026-03-01",
-    keywords: ["multa fgts 40", "calcular multa fgts"],
+    keywords: [
+      "multa fgts 40",
+      "calcular multa fgts",
+      "multa rescisoria fgts",
+      "fgts demissão cálculo",
+      "quanto é a multa de 40%"
+    ],
     content: `
-      <p>A multa é:</p>
 
-      <pre>saldo × 0,4</pre>
+      <p>Se você foi demitido ou está saindo do emprego, é essencial entender <strong>como calcular a multa de 40% do FGTS</strong>.</p>
 
-      <p>Exemplo:</p>
+      <p>Essa multa é um valor adicional pago pela empresa ao trabalhador em caso de <strong>demissão sem justa causa</strong>.</p>
 
-      <p>R$ 10.000 → <strong>R$ 4.000</strong></p>
+      <h2>Como calcular a multa de 40% do FGTS</h2>
+
+      <p>O cálculo é simples:</p>
+
+      <pre>Saldo do FGTS × 0,4</pre>
+
+      <p>Ou seja, você recebe <strong>40% sobre todo o valor acumulado</strong> na sua conta do FGTS.</p>
+
+      <h2>Exemplo prático</h2>
+
+      <div style="background:#f9fafb;padding:16px;border-radius:8px;">
+        <p><strong>Saldo do FGTS:</strong> R$ 10.000</p>
+        <p><strong>Multa de 40%:</strong> R$ 4.000</p>
+        <p><strong>Total recebido:</strong> R$ 14.000</p>
+      </div>
+
+      <p>Quanto maior o saldo acumulado, maior será o valor da multa.</p>
+
+      <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
+        👉 <a href="/simuladores/multa-40"><strong>Calcular minha multa agora</strong></a>
+      </div>
+
+      <h2>A multa é calculada sobre qual valor?</h2>
+
+      <p>A multa de 40% é calculada sobre <strong>todo o valor depositado pela empresa durante o contrato</strong>.</p>
+
+      <p>Mesmo que você já tenha feito saques (como saque-aniversário ou saque emergencial), a base de cálculo pode considerar o total depositado ao longo do tempo.</p>
+
+      <h2>Quando você tem direito à multa de 40%?</h2>
+
+      <ul>
+        <li>✔️ Demissão sem justa causa → recebe 40%</li>
+        <li>⚠️ Acordo trabalhista → recebe 20%</li>
+        <li>❌ Pedido de demissão → não recebe multa</li>
+      </ul>
+
+      <h2>O que acontece no saque-aniversário?</h2>
+
+      <p>Se você optou pelo saque-aniversário:</p>
+
+      <ul>
+        <li>✔️ Recebe a multa de 40%</li>
+        <li>❌ Não pode sacar o saldo total do FGTS</li>
+      </ul>
+
+      <p>👉 <a href="/simuladores/saque-aniversario"><strong>Simular saque-aniversário</strong></a></p>
+
+      <h2>Quando a multa é paga?</h2>
+
+      <p>A empresa deve pagar a multa junto com a rescisão do contrato, normalmente em até <strong>10 dias após a demissão</strong>.</p>
+
+      <h2>Como saber se o valor está correto?</h2>
+
+      <p>Para conferir se a multa foi calculada corretamente:</p>
+
+      <ul>
+        <li>Verifique seu saldo total no FGTS</li>
+        <li>Multiplique por 40%</li>
+        <li>Compare com o valor pago pela empresa</li>
+      </ul>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Simular minha rescisão completa</strong></a>
+      </div>
+
+      <h2>Perguntas frequentes</h2>
+
+      <h3>A multa de 40% é obrigatória?</h3>
+      <p>Sim, em casos de demissão sem justa causa.</p>
+
+      <h3>A multa é sobre o saldo atual ou total?</h3>
+      <p>Ela pode considerar todo o valor depositado durante o contrato, não apenas o saldo atual.</p>
+
+      <h3>Quem pede demissão recebe multa?</h3>
+      <p>Não. Nesse caso, não há pagamento de multa.</p>
+
     `,
   },
 
