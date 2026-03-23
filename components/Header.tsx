@@ -12,18 +12,19 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
         {/* 🔥 LOGO */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo.png"
-            alt="Simulador FGTS"
-            width={48}
-            height={48}
-            className="object-contain"
-          />
-          <span className="font-bold text-xl text-gray-900">
-            Simulador FGTS
-          </span>
-        </Link>
+       <Link href="/" className="flex items-center gap-3">
+        <Image
+          src="/logo.png"
+          alt="Simulador FGTS"
+          width={48}
+          height={48}
+          className="w-14 h-14 object-contain"
+          priority
+        />
+        <span className="font-bold text-xl text-gray-900">
+          Simulador FGTS
+        </span>
+      </Link>
 
         {/* 🔥 MENU DESKTOP */}
         <nav className="hidden md:flex items-center gap-6 text-gray-700 font-medium">

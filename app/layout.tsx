@@ -90,11 +90,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {/* 🔥 SIDEBAR (OURO PRO ADSENSE) */}
             <aside className="hidden lg:block space-y-6">
 
-              {/* Anúncio */}
-              <div className="bg-white p-4 rounded-xl shadow-sm">
-                {/* <AdsenseBlock /> */}
-              </div>
-
               {/* Links internos (SEO + retenção) */}
               <div className="bg-white p-4 rounded-xl shadow-sm">
                 <h3 className="font-semibold mb-3">
