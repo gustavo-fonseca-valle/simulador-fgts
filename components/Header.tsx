@@ -9,29 +9,34 @@ export default function Header() {
 
   return (
     <header className="border-b bg-white/95 backdrop-blur sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 py-2 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
         {/* 🔥 LOGO MAIOR */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.png"
             alt="Simulador FGTS"
-            width={160}
-            height={160}
-            className="w-40 h-40 object-contain" // 160x160px
+            width={128}
+            height={128}
+            className="w-32 h-32 object-contain" // Logo aumentada para 128x128px
             priority
           />
         </Link>
 
-        {/* 🔥 MENU DESKTOP - LINKS MAIORES E MAIS PRÓXIMOS */}
-        <nav className="hidden md:flex items-center gap-6 text-gray-800 font-semibold text-lg">
+        {/* 🔥 MENU DESKTOP */}
+        <nav className="hidden md:flex items-center gap-6 text-gray-800 font-medium text-lg">
+
           <Link href="/" className="hover:text-green-600 transition">Home</Link>
           <Link href="/blog" className="hover:text-green-600 transition">Blog</Link>
 
-          {/* Dropdown Simuladores */}
+          {/* 🔥 DROPDOWN SIMULADORES CORRIGIDO */}
           <div className="relative group">
-            <span className="cursor-pointer hover:text-green-600 transition">Simuladores ▾</span>
-            <div className="absolute top-full left-0 mt-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition w-60 bg-white border rounded-lg shadow-lg z-50">
+            <span className="cursor-pointer hover:text-green-600 transition flex items-center gap-1">
+              Simuladores ▾
+            </span>
+
+            {/* 🔹 Ajuste: garantir relative no parent + pointer-events */}
+            <div className="absolute top-full left-0 mt-2 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition duration-200 w-60 bg-white border rounded-lg shadow-lg z-50">
               <Link href="/simuladores/multa-40" className="block px-5 py-3 hover:bg-green-50">💰 Multa 40%</Link>
               <Link href="/simuladores/fgts" className="block px-5 py-3 hover:bg-green-50">📊 Calcular FGTS</Link>
               <Link href="/simuladores/saque-aniversario" className="block px-5 py-3 hover:bg-green-50">🎂 Saque-Aniversário</Link>
@@ -42,13 +47,13 @@ export default function Header() {
           <Link href="/contato" className="hover:text-green-600 transition">Contato</Link>
 
           {/* CTA */}
-          <Link href="/simuladores" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 hover:shadow-md transition font-semibold">
+          <Link href="/simuladores" className="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 hover:shadow-md transition font-semibold">
             Simular
           </Link>
         </nav>
 
         {/* 🔥 MOBILE BUTTON */}
-        <button className="md:hidden text-3xl" onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? "✕" : "☰"}
         </button>
       </div>
