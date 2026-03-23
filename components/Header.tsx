@@ -8,7 +8,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
+    <header className="border-b bg-white/90 backdrop-blur sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
 
         {/* 🔥 LOGO */}
@@ -16,9 +16,9 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="Simulador FGTS"
-            width={72}
-            height={72}
-            className="w-16 h-16 object-contain"
+            width={128}
+            height={128}
+            className="w-32 h-32 object-contain" // 128x128px
             priority
           />
         </Link>
@@ -42,7 +42,7 @@ export default function Header() {
           <Link href="/contato" className="hover:text-green-600 transition">Contato</Link>
 
           {/* CTA */}
-          <Link href="/simuladores" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 hover:shadow-md transition font-semibold">
+          <Link href="/simuladores" className="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 hover:shadow-md transition font-semibold">
             Simular
           </Link>
         </nav>
