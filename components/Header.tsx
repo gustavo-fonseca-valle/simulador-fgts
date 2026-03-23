@@ -21,9 +21,7 @@ export default function Header() {
           className="h-36 w-auto object-contain"
           priority
         />
-        <span className="font-bold text-3xl text-gray-900">
-          Simulador FGTS
-        </span>
+       
       </Link>
 
         {/* 🔥 MENU DESKTOP */}
