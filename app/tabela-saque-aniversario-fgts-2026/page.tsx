@@ -33,50 +33,46 @@ export default function TabelaSaqueAniversarioPage() {
       </h2>
 
       <div className="overflow-x-auto mb-8">
-        <table className="min-w-full border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-          <thead className="bg-blue-100">
+        <table className="min-w-full bg-white rounded-lg shadow-md border border-gray-200">
+          <thead className="bg-blue-600 text-white">
             <tr>
-              <th className="px-4 py-3 text-left text-gray-700 font-semibold">Faixa de saldo (R$)</th>
-              <th className="px-4 py-3 text-left text-gray-700 font-semibold">Alíquota</th>
-              <th className="px-4 py-3 text-left text-gray-700 font-semibold">Parcela adicional</th>
+              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
+                Faixa de saldo (R$)
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
+                Alíquota
+              </th>
+              <th className="px-4 py-3 text-left font-semibold text-sm uppercase">
+                Parcela adicional
+              </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 bg-white">
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">Até 500</td>
-              <td className="px-4 py-3">50%</td>
-              <td className="px-4 py-3">—</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">De 500,01 até 1.000</td>
-              <td className="px-4 py-3">40%</td>
-              <td className="px-4 py-3">R$ 50</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">De 1.000,01 até 5.000</td>
-              <td className="px-4 py-3">30%</td>
-              <td className="px-4 py-3">R$ 150</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">De 5.000,01 até 10.000</td>
-              <td className="px-4 py-3">20%</td>
-              <td className="px-4 py-3">R$ 650</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">De 10.000,01 até 15.000</td>
-              <td className="px-4 py-3">15%</td>
-              <td className="px-4 py-3">R$ 1.150</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3">De 15.000,01 até 20.000</td>
-              <td className="px-4 py-3">10%</td>
-              <td className="px-4 py-3">R$ 1.900</td>
-            </tr>
-            <tr className="hover:bg-blue-50 transition">
-              <td className="px-4 py-3 font-bold text-blue-600">Acima de 20.000</td>
-              <td className="px-4 py-3 font-bold text-blue-600">5%</td>
-              <td className="px-4 py-3 font-bold text-blue-600">R$ 2.900</td>
-            </tr>
+          <tbody className="divide-y divide-gray-200">
+            {[
+              ["Até 500", "50%", "—"],
+              ["De 500,01 até 1.000", "40%", "R$ 50"],
+              ["De 1.000,01 até 5.000", "30%", "R$ 150"],
+              ["De 5.000,01 até 10.000", "20%", "R$ 650"],
+              ["De 10.000,01 até 15.000", "15%", "R$ 1.150"],
+              ["De 15.000,01 até 20.000", "10%", "R$ 1.900"],
+              ["Acima de 20.000", "5%", "R$ 2.900"],
+            ].map((row, idx) => (
+              <tr
+                key={idx}
+                className="hover:bg-blue-50 transition-colors duration-200"
+              >
+                {row.map((cell, cellIdx) => (
+                  <td
+                    key={cellIdx}
+                    className={`px-4 py-3 text-gray-800 ${
+                      idx === 6 ? "font-semibold text-blue-700" : ""
+                    }`}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
