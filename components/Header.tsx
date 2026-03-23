@@ -32,7 +32,7 @@ export default function Header() {
               Simuladores ▾
             </span>
 
-            <div className="absolute hidden group-hover:block bg-white border rounded-lg shadow-md mt-2 w-56">
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white border rounded-lg shadow-md mt-0 w-56">
               <Link
                 href="/simuladores/multa-40"
                 className="block px-4 py-2 hover:bg-gray-100"
