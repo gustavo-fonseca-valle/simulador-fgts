@@ -1,23 +1,23 @@
 export const metadata = {
-  title: "Tabela Saque-Aniversário FGTS 2026: veja quanto você pode sacar",
+  title: "Saque Aniversário 2026: Tabela completa e como calcular",
   description:
-    "Confira a tabela do saque-aniversário FGTS 2026 e veja quanto você pode sacar com base no seu saldo. Cálculo atualizado e exemplos práticos.",
+    "Confira a tabela do saque-aniversário FGTS 2026 e descubra quanto você pode sacar. Aprenda a calcular e use nosso simulador atualizado para 2026.",
 }
 
 export default function TabelaSaqueAniversarioPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
-      
+
       <h1 className="text-3xl font-bold mb-6">
-        Tabela Saque-Aniversário FGTS 2026: veja quanto você pode sacar
+        Saque Aniversário 2026: Tabela do saque-aniversario e cálculo
       </h1>
 
       <p className="mb-4">
-        O saque-aniversário do FGTS permite retirar uma parte do saldo todos os anos, no mês do seu aniversário. O valor depende do total disponível nas suas contas do FGTS.
+        O <strong>saque-aniversário do FGTS 2026</strong> permite retirar uma parte do saldo todos os anos, no mês do seu aniversário. O valor depende do total disponível nas suas contas do FGTS.
       </p>
 
       <p className="mb-4">
-        👉 <strong>Use a tabela abaixo para descobrir quanto você pode sacar ou utilize o simulador para calcular automaticamente.</strong>
+        👉 <strong>Confira a tabela do saque-aniversario 2026 abaixo ou use o simulador para calcular automaticamente seu valor.</strong>
       </p>
 
       {/* CTA */}
@@ -108,7 +108,7 @@ export default function TabelaSaqueAniversarioPage() {
       </h2>
 
       <p className="mb-4">
-        Ao optar pelo saque-aniversário, você pode retirar valores todos os anos. Porém, em caso de demissão sem justa causa, não poderá sacar o saldo total do FGTS — apenas a multa de 40%.
+        Ao optar pelo <strong>saque-aniversário 2026</strong>, você pode retirar valores todos os anos. Porém, em caso de demissão sem justa causa, não poderá sacar o saldo total do FGTS — apenas a multa de 40%.
       </p>
 
       <p className="mb-6">
