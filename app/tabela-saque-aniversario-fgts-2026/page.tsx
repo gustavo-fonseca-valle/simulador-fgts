@@ -1,30 +1,35 @@
 export const metadata = {
-  title: "Tabela Saque-Aniversário FGTS 2026",
+  title: "Tabela Saque-Aniversário FGTS 2026: veja quanto você pode sacar",
   description:
-    "Veja a tabela atualizada do saque-aniversário do FGTS em 2026 e descubra quanto você pode sacar de acordo com seu saldo.",
+    "Confira a tabela do saque-aniversário FGTS 2026 e veja quanto você pode sacar com base no seu saldo. Cálculo atualizado e exemplos práticos.",
 }
 
 export default function TabelaSaqueAniversarioPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
+      
       <h1 className="text-3xl font-bold mb-6">
-        Tabela do Saque-Aniversário do FGTS 2026
+        Tabela Saque-Aniversário FGTS 2026: veja quanto você pode sacar
       </h1>
 
       <p className="mb-4">
-        O saque-aniversário do FGTS permite que trabalhadores retirem uma parte
-        do saldo do Fundo de Garantia todos os anos, no mês do seu aniversário.
-        O valor disponível para saque depende do saldo total existente nas
-        contas do FGTS.
+        O saque-aniversário do FGTS permite retirar uma parte do saldo todos os anos, no mês do seu aniversário. O valor depende do total disponível nas suas contas do FGTS.
       </p>
 
+      <p className="mb-4">
+        👉 <strong>Use a tabela abaixo para descobrir quanto você pode sacar ou utilize o simulador para calcular automaticamente.</strong>
+      </p>
+
+      {/* CTA */}
       <p className="mb-6">
-        A seguir você pode conferir a tabela atual utilizada para calcular o
-        valor disponível no saque-aniversário.
+        👉{" "}
+        <a href="/simuladores/saque-aniversario" className="text-blue-600 underline font-semibold">
+          Calcular agora meu saque-aniversário
+        </a>
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">
-        Tabela oficial do saque-aniversário
+        Tabela oficial do saque-aniversário FGTS 2026
       </h2>
 
       <div className="overflow-x-auto mb-8">
@@ -77,22 +82,37 @@ export default function TabelaSaqueAniversarioPage() {
       </div>
 
       <h2 className="text-2xl font-semibold mb-4">
-        Como calcular o valor do saque-aniversário
+        Como calcular o saque-aniversário (exemplos práticos)
       </h2>
 
       <p className="mb-4">
-        Para calcular o valor disponível para saque, é necessário aplicar a
-        alíquota correspondente à faixa de saldo e depois somar a parcela
-        adicional indicada na tabela.
+        O cálculo é simples: aplique a alíquota sobre o saldo e some a parcela adicional.
       </p>
+
+      <div className="bg-gray-50 border rounded-lg p-4 mb-6">
+        <p className="mb-2 font-semibold">Exemplo 1 (saldo de R$ 3.000):</p>
+        <p className="mb-2">30% de R$ 3.000 = R$ 900</p>
+        <p className="mb-2">+ R$ 150</p>
+        <p className="font-semibold">Total: R$ 1.050</p>
+      </div>
+
+      <div className="bg-gray-50 border rounded-lg p-4 mb-6">
+        <p className="mb-2 font-semibold">Exemplo 2 (saldo de R$ 8.000):</p>
+        <p className="mb-2">20% de R$ 8.000 = R$ 1.600</p>
+        <p className="mb-2">+ R$ 650</p>
+        <p className="font-semibold">Total: R$ 2.250</p>
+      </div>
+
+      <h2 className="text-2xl font-semibold mb-4">
+        Saque-aniversário ou saque-rescisão: qual escolher?
+      </h2>
 
       <p className="mb-4">
-        Por exemplo: se o trabalhador possui R$ 3.000 de saldo no FGTS, ele se
-        enquadra na faixa de 30%. Nesse caso o cálculo seria:
+        Ao optar pelo saque-aniversário, você pode retirar valores todos os anos. Porém, em caso de demissão sem justa causa, não poderá sacar o saldo total do FGTS — apenas a multa de 40%.
       </p>
 
-      <p className="mb-6 font-medium">
-        30% de R$ 3.000 + R$ 150 = R$ 1.050 disponíveis para saque.
+      <p className="mb-6">
+        Já no saque-rescisão, você mantém o direito de sacar todo o saldo em caso de demissão. Avalie seu perfil antes de escolher.
       </p>
 
       <h2 className="text-2xl font-semibold mb-4">
@@ -100,27 +120,24 @@ export default function TabelaSaqueAniversarioPage() {
       </h2>
 
       <p className="mb-4">
-        A escolha pelo saque-aniversário pode ser interessante para quem deseja
-        receber uma parte do saldo do FGTS todos os anos. Porém, quem opta por
-        essa modalidade perde o direito de sacar o saldo total do FGTS em caso
-        de demissão sem justa causa, mantendo apenas o direito à multa
-        rescisória.
+        O saque-aniversário pode ser vantajoso para quem deseja acesso antecipado ao dinheiro. Porém, pode ser desvantajoso em caso de demissão.
       </p>
 
-      <p className="mb-4">
-        Antes de aderir, é importante avaliar sua situação financeira e
-        considerar se o saque anual realmente é vantajoso para seu planejamento.
+      <p className="mb-6">
+        A decisão depende do seu planejamento financeiro e estabilidade no emprego.
       </p>
 
+      {/* CTA FINAL */}
       <h2 className="text-2xl font-semibold mb-4">
-        Simule seu saque do FGTS
+        Descubra quanto você pode sacar agora
       </h2>
 
       <p>
-        Para descobrir quanto você poderia sacar utilizando a tabela acima,
-        utilize nosso simulador de FGTS disponível na página inicial do site.
-        Ele calcula automaticamente o valor aproximado com base no seu saldo
-        informado.
+        👉{" "}
+        <a href="/simuladores/saque-aniversario" className="text-blue-600 underline font-semibold">
+          Use nosso simulador gratuito
+        </a>{" "}
+        e veja o valor exato do seu saque em poucos segundos.
       </p>
     </main>
   )
