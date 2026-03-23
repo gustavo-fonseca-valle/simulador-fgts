@@ -11,10 +11,10 @@ export default function Header() {
     <header className="border-b bg-white/80 backdrop-blur sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
-        {/* 🔥 LOGO COM IMAGEM */}
+        {/* 🔥 LOGO */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.png" // coloque sua logo aqui (public/logo.png)
+            src="/logo.png"
             alt="Simulador FGTS"
             width={36}
             height={36}
@@ -35,33 +35,42 @@ export default function Header() {
             Blog
           </Link>
 
-          {/* Dropdown */}
+          {/* 🔥 DROPDOWN CORRIGIDO */}
           <div className="relative group">
             <span className="cursor-pointer hover:text-black transition">
               Simuladores ▾
             </span>
 
-            <div className="absolute top-full left-0 hidden group-hover:block bg-white border rounded-xl shadow-lg mt-2 w-60 overflow-hidden">
-              <Link
-                href="/simuladores/multa-40"
-                className="block px-4 py-3 hover:bg-gray-100"
-              >
-                💰 Multa 40% FGTS
-              </Link>
+            {/* Área com "ponte invisível" */}
+            <div className="absolute top-full left-0 pt-2 
+              opacity-0 pointer-events-none 
+              group-hover:opacity-100 group-hover:pointer-events-auto 
+              transition duration-200"
+            >
+              <div className="bg-white border rounded-xl shadow-lg w-60 overflow-hidden">
 
-              <Link
-                href="/simuladores/fgts"
-                className="block px-4 py-3 hover:bg-gray-100"
-              >
-                📊 Calcular FGTS
-              </Link>
+                <Link
+                  href="/simuladores/multa-40"
+                  className="block px-4 py-3 hover:bg-gray-100"
+                >
+                  💰 Multa 40% FGTS
+                </Link>
 
-              <Link
-                href="/simuladores/saque-aniversario"
-                className="block px-4 py-3 hover:bg-gray-100"
-              >
-                🎂 Saque-Aniversário
-              </Link>
+                <Link
+                  href="/simuladores/fgts"
+                  className="block px-4 py-3 hover:bg-gray-100"
+                >
+                  📊 Calcular FGTS
+                </Link>
+
+                <Link
+                  href="/simuladores/saque-aniversario"
+                  className="block px-4 py-3 hover:bg-gray-100"
+                >
+                  🎂 Saque-Aniversário
+                </Link>
+
+              </div>
             </div>
           </div>
 
@@ -73,7 +82,7 @@ export default function Header() {
             Contato
           </Link>
 
-          {/* 🔥 BOTÃO CTA (IMPORTANTE PRA CONVERSÃO) */}
+          {/* 🔥 CTA */}
           <Link
             href="/simuladores"
             className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition font-semibold"
@@ -92,7 +101,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* 🔥 MENU MOBILE */}
+      {/* 🔥 MOBILE MENU */}
       {menuOpen && (
         <div className="md:hidden border-t px-6 py-4 flex flex-col gap-4 bg-white">
 
@@ -124,7 +133,6 @@ export default function Header() {
             Contato
           </Link>
 
-          {/* CTA MOBILE */}
           <Link
             href="/simuladores"
             onClick={() => setMenuOpen(false)}
