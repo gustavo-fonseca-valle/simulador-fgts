@@ -15,22 +15,75 @@ export const posts: Post[] = [
     date: "2026-03-01",
     keywords: ["calcular fgts", "fgts como calcular", "fgts 2026"],
     content: `
-      <p>O FGTS é um direito de todo trabalhador CLT. A empresa deposita mensalmente <strong>8% do salário bruto</strong>.</p>
+      <p>O FGTS (Fundo de Garantia do Tempo de Serviço) é um direito de todo trabalhador CLT. Todos os meses, a empresa deposita um valor na sua conta — e você pode sacar esse dinheiro em situações específicas, como demissão sem justa causa.</p>
 
-      <h2>Fórmula do FGTS</h2>
-      <pre>salário × 0,08 × meses trabalhados</pre>
+      <p>Mas afinal, <strong>como calcular o FGTS corretamente?</strong> Veja o passo a passo simples abaixo.</p>
 
-      <p><strong>Exemplo prático:</strong></p>
+      <h2>Como calcular o FGTS (fórmula)</h2>
+
+      <p>O cálculo do FGTS é baseado em uma regra simples:</p>
+
+      <pre>Salário bruto × 0,08 × meses trabalhados</pre>
+
+      <p>Ou seja, a empresa deposita <strong>8% do seu salário todos os meses</strong>.</p>
+
+      <h2>Exemplo prático</h2>
+
       <ul>
         <li>Salário: R$ 3.000</li>
+        <li>Depósito mensal: R$ 240</li>
         <li>Tempo: 24 meses</li>
       </ul>
 
       <p><strong>Total acumulado: R$ 5.760</strong></p>
 
-      <div style="margin:20px 0;padding:20px;background:#f0fdf4;">
-        👉 <a href="/simuladores"><strong>Simule seu FGTS agora</strong></a>
+      <h2>Quanto a empresa deposita por mês?</h2>
+
+      <p>O valor mensal do FGTS é sempre 8% do salário bruto. Veja alguns exemplos:</p>
+
+      <ul>
+        <li>Salário de R$ 2.000 → FGTS de R$ 160/mês</li>
+        <li>Salário de R$ 3.000 → FGTS de R$ 240/mês</li>
+        <li>Salário de R$ 5.000 → FGTS de R$ 400/mês</li>
+      </ul>
+
+      <h2>Como calcular o FGTS acumulado</h2>
+
+      <p>Para saber quanto você tem acumulado, basta multiplicar o valor mensal pelo número de meses trabalhados.</p>
+
+      <p>Importante: esse cálculo é uma estimativa. O saldo real pode variar por causa de juros e correções.</p>
+
+      <h2>Quanto você pode receber na demissão</h2>
+
+      <p>Se for demitido sem justa causa, você recebe:</p>
+
+      <ul>
+        <li>✔️ Todo o saldo do FGTS</li>
+        <li>✔️ + multa de 40%</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <ul>
+        <li>Saldo: R$ 10.000</li>
+        <li>Multa: R$ 4.000</li>
+        <li>Total: R$ 14.000</li>
+      </ul>
+
+      <div style="margin:20px 0;padding:20px;background:#f0fdf4;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Calcule seu FGTS agora</strong></a>
       </div>
+
+      <h2>Perguntas frequentes</h2>
+
+      <h3>O FGTS desconta do salário?</h3>
+      <p>Não. O depósito é feito pela empresa, sem desconto no salário do trabalhador.</p>
+
+      <h3>O FGTS rende quanto?</h3>
+      <p>O FGTS rende cerca de 3% ao ano + Taxa Referencial (TR).</p>
+
+      <h3>Posso sacar o FGTS a qualquer momento?</h3>
+      <p>Não. O saque só é permitido em situações específicas, como demissão, compra de imóvel ou saque-aniversário.</p>
     `,
   },
 
