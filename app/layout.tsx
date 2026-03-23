@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Script from "next/script"
+import Link from "next/link"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -43,8 +44,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* 🔥 FAVICON (IMPORTANTE PRA CONFIANÇA) */}
+        {/* 🔥 FAVICONS (IMPORTANTE PRA GOOGLE + MOBILE) */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         {/* 🔥 GOOGLE ADSENSE */}
         <Script
@@ -54,7 +58,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           strategy="afterInteractive"
         />
 
-        {/* 🔥 STRUCTURED DATA */}
+        {/* 🔥 STRUCTURED DATA (LOGO + BRAND) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Simulador FGTS",
+              url: "https://simuladorfgts.com.br",
+              logo: "https://simuladorfgts.com.br/logo.png",
+            }),
+          }}
+        />
+
+        {/* 🔥 WEBSITE STRUCTURE */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -72,47 +90,55 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <Header />
 
-        {/* 🔥 ÁREA PRINCIPAL (MAIS LARGA E PROFISSIONAL) */}
+        {/* 🔥 CONTAINER PRINCIPAL */}
         <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-
-          {/* 🔥 ESPAÇO PARA ANÚNCIO TOPO (OPCIONAL FUTURO) */}
-          {/* <div className="mb-6">
-            <AdsenseBlock />
-          </div> */}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-            {/* 🔥 CONTEÚDO PRINCIPAL */}
+            {/* 🔥 CONTEÚDO */}
             <div className="lg:col-span-2">
               {children}
             </div>
 
-            {/* 🔥 SIDEBAR (OURO PRO ADSENSE) */}
+            {/* 🔥 SIDEBAR (FOCADA EM CONVERSÃO) */}
             <aside className="hidden lg:block space-y-6">
 
-              {/* Links internos (SEO + retenção) */}
+              {/* 🔥 BLOCO CTA (CLIQUE = DINHEIRO) */}
               <div className="bg-white p-4 rounded-xl shadow-sm">
                 <h3 className="font-semibold mb-3">
-                  🔥 Simuladores populares
+                  🔥 Simule agora
                 </h3>
 
-                <ul className="space-y-2 text-sm">
-                  <li>
-                    <a href="/simuladores/multa-40" className="hover:underline">
-                      Multa de 40% do FGTS
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/simuladores/fgts" className="hover:underline">
-                      Calcular FGTS
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/simuladores/saque-aniversario" className="hover:underline">
-                      Saque-Aniversário
-                    </a>
-                  </li>
-                </ul>
+                <div className="space-y-2">
+                  <Link
+                    href="/simuladores/fgts"
+                    className="block bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition"
+                  >
+                    📊 Calcular FGTS
+                  </Link>
+
+                  <Link
+                    href="/simuladores/multa-40"
+                    className="block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition"
+                  >
+                    💰 Multa 40%
+                  </Link>
+
+                  <Link
+                    href="/simuladores/saque-aniversario"
+                    className="block bg-purple-600 text-white text-center py-2 rounded-lg hover:bg-purple-700 transition"
+                  >
+                    🎂 Saque-Aniversário
+                  </Link>
+                </div>
+              </div>
+
+              {/* 🔥 ESPAÇO DE ANÚNCIO (PADRÃO 300x250) */}
+              <div className="bg-white p-4 rounded-xl shadow-sm min-h-[250px] flex items-center justify-center">
+                {/* <AdsenseBlock /> */}
+                <span className="text-gray-400 text-sm">
+                  Espaço para anúncio
+                </span>
               </div>
 
             </aside>
