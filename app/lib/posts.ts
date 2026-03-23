@@ -252,82 +252,220 @@ export const posts: Post[] = [
 
   {
     slug: "fgts-salario-3000",
-    title: "FGTS de quem ganha R$ 3.000: quanto recebe por mês e por ano?",
-    description: "Descubra quanto é depositado de FGTS para salário de R$ 3.000.",
+    title: "FGTS de quem ganha R$ 3.000: quanto recebe por mês e por ano (2026)",
+    description: "Veja quanto é depositado de FGTS para salário de R$ 3.000 e quanto você acumula ao longo do tempo.",
     date: "2026-03-01",
     keywords: ["fgts 3000", "salario 3000 fgts quanto da"],
     content: `
-      <p>Se você ganha <strong>R$ 3.000</strong>, seu FGTS será:</p>
+
+      <p>Se você ganha <strong>R$ 3.000</strong>, o valor depositado no FGTS todos os meses é de <strong>8% do salário</strong>.</p>
+
+      <h2>Quanto é o FGTS de R$ 3.000?</h2>
 
       <ul>
         <li>Mensal: <strong>R$ 240</strong></li>
         <li>Anual: <strong>R$ 2.880</strong></li>
       </ul>
 
-      <h2>Em 5 anos</h2>
-      <p><strong>R$ 14.400</strong> (sem juros)</p>
+      <h2>Quanto acumula ao longo do tempo</h2>
 
-      <div style="margin:20px 0;padding:20px;background:#ecfeff;">
-        👉 <a href="/simuladores"><strong>Simular com aumento salarial</strong></a>
+      <ul>
+        <li>2 anos: R$ 5.760</li>
+        <li>5 anos: R$ 14.400</li>
+        <li>10 anos: R$ 28.800</li>
+      </ul>
+
+      <p>Esses valores não consideram juros e correções do FGTS.</p>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Calcular meu FGTS exato</strong></a>
       </div>
+
+      <h2>Quanto você recebe na demissão</h2>
+
+      <p>Se for demitido sem justa causa:</p>
+
+      <ul>
+        <li>✔️ Recebe todo o saldo</li>
+        <li>✔️ + 40% de multa</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong> R$ 14.400 → R$ 20.160</p>
+
     `,
   },
 
   {
     slug: "fgts-salario-2000",
-    title: "FGTS de quem ganha R$ 2.000: quanto dá?",
-    description: "Veja quanto você acumula de FGTS ganhando R$ 2.000.",
+    title: "FGTS de quem ganha R$ 2.000: quanto dá por mês e por ano",
+    description: "Descubra quanto você acumula de FGTS ganhando R$ 2.000 e quanto pode receber na demissão.",
     date: "2026-03-01",
     keywords: ["fgts 2000", "salario 2000 fgts"],
     content: `
-      <p>Para salário de R$ 2.000:</p>
+
+      <p>Para um salário de <strong>R$ 2.000</strong>, o FGTS corresponde a <strong>8% do valor</strong>.</p>
+
+      <h2>Valores do FGTS</h2>
 
       <ul>
         <li>Mensal: <strong>R$ 160</strong></li>
         <li>Anual: <strong>R$ 1.920</strong></li>
       </ul>
+
+      <h2>Acumulado ao longo do tempo</h2>
+
+      <ul>
+        <li>2 anos: R$ 3.840</li>
+        <li>5 anos: R$ 9.600</li>
+        <li>10 anos: R$ 19.200</li>
+      </ul>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Simular meu FGTS agora</strong></a>
+      </div>
+
+      <h2>FGTS na demissão</h2>
+
+      <p>Você recebe o saldo total + 40% de multa em caso de demissão sem justa causa.</p>
+
     `,
   },
 
   {
     slug: "fgts-salario-5000",
-    title: "FGTS de quem ganha R$ 5.000: valor mensal e acumulado",
-    description: "Veja quanto o FGTS rende para salário de R$ 5.000.",
+    title: "FGTS de quem ganha R$ 5.000: valor mensal, anual e acumulado",
+    description: "Veja quanto o FGTS rende para salário de R$ 5.000 e quanto você pode acumular ao longo dos anos.",
     date: "2026-03-01",
     keywords: ["fgts 5000", "salario 5000 fgts"],
     content: `
-      <p>Salário de R$ 5.000 gera:</p>
+
+      <p>Quem ganha <strong>R$ 5.000</strong> recebe depósitos mensais de <strong>8% no FGTS</strong>.</p>
+
+      <h2>Valores do FGTS</h2>
 
       <ul>
         <li>Mensal: <strong>R$ 400</strong></li>
         <li>Anual: <strong>R$ 4.800</strong></li>
       </ul>
+
+      <h2>Quanto acumula com o tempo</h2>
+
+      <ul>
+        <li>2 anos: R$ 9.600</li>
+        <li>5 anos: R$ 24.000</li>
+        <li>10 anos: R$ 48.000</li>
+      </ul>
+
+      <p>Com juros, o valor real pode ser maior.</p>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Calcular meu FGTS exato</strong></a>
+      </div>
+
+      <h2>Quanto você recebe na demissão</h2>
+
+      <p>Além do saldo, você recebe mais 40% de multa.</p>
+
     `,
   },
 
   {
     slug: "fgts-2-anos-trabalho",
-    title: "Quanto tenho de FGTS com 2 anos de trabalho?",
-    description: "Veja quanto você pode ter acumulado em 2 anos.",
+    title: "Quanto tenho de FGTS com 2 anos de trabalho? (cálculo completo)",
+    description: "Descubra quanto você pode ter de FGTS em 2 anos com exemplos reais e cálculo passo a passo.",
     date: "2026-03-01",
-    keywords: ["fgts 2 anos", "quanto tenho fgts"],
+    keywords: ["fgts 2 anos", "quanto tenho fgts", "fgts 2 anos quanto da"],
     content: `
-      <p>Exemplo com salário de R$ 3.000:</p>
 
-      <p><strong>R$ 5.760</strong></p>
+      <p>Se você trabalhou por <strong>2 anos (24 meses)</strong>, já deve ter acumulado um valor considerável no FGTS.</p>
+
+      <h2>Quanto tenho de FGTS em 2 anos?</h2>
+
+      <p>O cálculo é simples:</p>
+
+      <pre>Salário × 0,08 × meses trabalhados</pre>
+
+      <h2>Exemplo com salário de R$ 3.000</h2>
+
+      <ul>
+        <li>Depósito mensal: R$ 240</li>
+        <li>Tempo: 24 meses</li>
+      </ul>
+
+      <p><strong>Total acumulado: R$ 5.760</strong></p>
+
+      <h2>Outros exemplos de FGTS em 2 anos</h2>
+
+      <ul>
+        <li>Salário de R$ 2.000 → R$ 3.840</li>
+        <li>Salário de R$ 4.000 → R$ 7.680</li>
+        <li>Salário de R$ 5.000 → R$ 9.600</li>
+      </ul>
+
+      <p>Esses valores são estimativas e podem variar com juros e correções.</p>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Calcular meu FGTS exato</strong></a>
+      </div>
+
+      <h2>Quanto você recebe na demissão?</h2>
+
+      <p>Se for demitido sem justa causa, você recebe:</p>
+
+      <ul>
+        <li>✔️ Todo o saldo</li>
+        <li>✔️ + 40% de multa</li>
+      </ul>
+
     `,
   },
 
   {
     slug: "fgts-5-anos-trabalho",
-    title: "FGTS com 5 anos de trabalho: quanto dá?",
-    description: "Descubra quanto você acumulou em 5 anos de FGTS.",
+    title: "FGTS com 5 anos de trabalho: quanto dá? (valores atualizados)",
+    description: "Veja quanto você pode ter acumulado de FGTS em 5 anos com exemplos por salário.",
     date: "2026-03-01",
-    keywords: ["fgts 5 anos", "fgts acumulado"],
+    keywords: ["fgts 5 anos", "fgts acumulado", "fgts 5 anos quanto da"],
     content: `
-      <p>Salário de R$ 3.000:</p>
 
-      <p><strong>R$ 14.400</strong></p>
+      <p>Em <strong>5 anos de trabalho (60 meses)</strong>, o valor acumulado no FGTS pode ser alto.</p>
+
+      <h2>Como calcular o FGTS em 5 anos</h2>
+
+      <pre>Salário × 0,08 × 60 meses</pre>
+
+      <h2>Exemplo com salário de R$ 3.000</h2>
+
+      <ul>
+        <li>Depósito mensal: R$ 240</li>
+        <li>Total em 5 anos: <strong>R$ 14.400</strong></li>
+      </ul>
+
+      <h2>Outros exemplos</h2>
+
+      <ul>
+        <li>Salário de R$ 2.000 → R$ 9.600</li>
+        <li>Salário de R$ 4.000 → R$ 19.200</li>
+        <li>Salário de R$ 5.000 → R$ 24.000</li>
+      </ul>
+
+      <p>O valor real pode ser maior devido aos juros do FGTS.</p>
+
+      <div style="margin:20px 0;padding:20px;background:#ecfeff;border-radius:8px;">
+        👉 <a href="/simuladores"><strong>Simular meu FGTS agora</strong></a>
+      </div>
+
+      <h2>FGTS em 5 anos na demissão</h2>
+
+      <p>Se for demitido sem justa causa, você recebe:</p>
+
+      <ul>
+        <li>Saldo total</li>
+        <li>+ 40% de multa</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong> R$ 14.400 → R$ 20.160</p>
+
     `,
   },
 
