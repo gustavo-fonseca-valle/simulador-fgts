@@ -12,16 +12,16 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
 
         {/* 🔥 LOGO */}
-       <Link href="/" className="flex items-center gap-3">
+       <Link href="/" className="flex items-center gap-4">
         <Image
           src="/logo.png"
           alt="Simulador FGTS"
-          width={48}
-          height={48}
-          className="w-14 h-14 object-contain"
+          width={256}          // tamanho base para Next.js
+          height={170}         // proporcional à imagem original
+          className="h-36 w-auto object-contain"
           priority
         />
-        <span className="font-bold text-xl text-gray-900">
+        <span className="font-bold text-3xl text-gray-900">
           Simulador FGTS
         </span>
       </Link>
