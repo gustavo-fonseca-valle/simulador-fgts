@@ -2,9 +2,9 @@ import Link from "next/link"
 import AdsenseBlock from "@/components/AdsenseBlock"
 
 export const metadata = {
-  title: "Simulador FGTS 2026 | Multa 40% e Saque-Aniversário",
+  title: "Simulador FGTS 2026: Calcule saldo + multa de 40% grátis",
   description:
-    "Simule FGTS, multa de 40% e saque-aniversário. Ferramentas gratuitas e guias completos atualizados para 2026.",
+    "Calcule seu FGTS atualizado em 2026 e veja quanto você pode receber na demissão. Simulador grátis com multa de 40% e saque-aniversário.",
 }
 
 export default function HomePage() {
@@ -14,11 +14,15 @@ export default function HomePage() {
       {/* HERO */}
       <section className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Simulador FGTS 2026 e Guias Atualizados
+          Simulador FGTS 2026: veja quanto você vai receber
         </h1>
 
         <p className="text-lg text-gray-700 mb-4">
           Calcule valores do FGTS de forma simples e rápida. Utilize nossos simuladores gratuitos e entenda seus direitos trabalhistas.
+        </p>
+
+        <p className="mt-4 text-base">
+          <strong>Use agora o simulador gratuito e descubra quanto você pode receber em poucos segundos.</strong>
         </p>
 
         <p className="text-gray-700">
@@ -28,7 +32,7 @@ export default function HomePage() {
 
       {/* SIMULADORES */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Simuladores de FGTS</h2>
+        <h2 className="text-2xl font-semibold mb-6">Simuladores de FGTS online</h2>
 
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
           <Link
@@ -37,7 +41,7 @@ export default function HomePage() {
           >
             <h3 className="text-xl font-semibold mb-2">Multa de 40% do FGTS</h3>
             <p className="text-gray-600">
-              Calcule o valor da multa rescisória em caso de demissão sem justa causa.
+              Descubra quanto você vai receber de multa de 40% na demissão.
             </p>
           </Link>
 
@@ -47,7 +51,7 @@ export default function HomePage() {
           >
             <h3 className="text-xl font-semibold mb-2">Saque-Aniversário FGTS</h3>
             <p className="text-gray-600">
-              Descubra quanto você pode sacar todos os anos.
+              Veja quanto você pode sacar no saque-aniversário com valores atualizados.
             </p>
           </Link>
         </div>
@@ -58,7 +62,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold mb-6">Guias sobre FGTS</h2>
         <div className="space-y-3 text-blue-600">
           <Link href="/blog/como-calcular-fgts" className="block hover:underline">
-            Como calcular FGTS passo a passo
+            Como calcular FGTS em 2026 (passo a passo)
           </Link>
           <Link href="/blog/fgts-demissao" className="block hover:underline">
             FGTS na demissão: quanto você recebe
@@ -89,6 +93,10 @@ export default function HomePage() {
         <p className="text-sm text-gray-500">
           Este site não possui vínculo com a Caixa Econômica Federal.
         </p>
+
+        <p className="text-sm text-gray-500">
+          Conteúdo revisado com base em regras oficiais do FGTS divulgadas pelo governo federal.
+        </p>
       </section>
 
       {/* FAQ */}
@@ -99,7 +107,7 @@ export default function HomePage() {
           <div>
             <h3 className="font-semibold">Quanto rende o FGTS por ano?</h3>
             <p className="text-gray-700">
-              O FGTS rende 3% ao ano mais distribuição de lucros.
+              O FGTS rende 3% ao ano + distribuição de lucros definida pelo governo. Na prática, o rendimento costuma ser maior que 3% ao ano.
               Veja detalhes em{" "}
               <Link href="/blog/fgts-rende-quanto-por-ano" className="text-blue-600 underline">
                 nosso guia completo
