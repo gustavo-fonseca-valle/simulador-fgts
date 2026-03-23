@@ -30,14 +30,15 @@ export default function Header() {
 
           {/* Dropdown Simuladores */}
           <div className="relative group">
+            {/* Trigger */}
             <span className="cursor-pointer hover:text-green-600 transition flex items-center gap-1">
               Simuladores ▾
             </span>
 
             {/* Dropdown */}
-            <div className="absolute top-full left-0 mt-2 w-64 bg-white border rounded-xl shadow-xl z-50
-                opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto
-                hover:opacity-100 hover:pointer-events-auto transition-all duration-200">
+            <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100
+                            absolute top-full left-0 mt-2 w-64 bg-white border rounded-xl shadow-xl z-50
+                            transition-all duration-200">
               <Link href="/simuladores/multa-40" className="block px-6 py-3 hover:bg-green-50">💰 Multa 40%</Link>
               <Link href="/simuladores/fgts" className="block px-6 py-3 hover:bg-green-50">📊 Calcular FGTS</Link>
               <Link href="/simuladores/saque-aniversario" className="block px-6 py-3 hover:bg-green-50">🎂 Saque-Aniversário</Link>
