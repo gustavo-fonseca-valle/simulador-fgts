@@ -10,6 +10,21 @@ export default function SimuladorFGTS() {
   const [resultado, setResultado] = useState<number | null>(null)
   const [erro, setErro] = useState("")
 
+  // 🔥 LEAD GATE
+  const [showLeadGate, setShowLeadGate] = useState(false)
+  const [unlocked, setUnlocked] = useState(false)
+  const [nome, setNome] = useState("")
+  const [whatsapp, setWhatsapp] = useState("")
+
+  function formatarWhatsapp(valor: string) {
+    valor = valor.replace(/\D/g, "")
+
+    valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2")
+    valor = valor.replace(/(\d{5})(\d)/, "$1-$2")
+
+    return valor
+  }
+
   function formatarMoeda(valor: number) {
     return valor.toLocaleString("pt-BR", {
       style: "currency",
@@ -17,19 +32,86 @@ export default function SimuladorFGTS() {
     })
   }
 
-  function calcular() {
+  function calcularValor() {
     const s = parseFloat(salario)
     const m = parseInt(meses)
 
     if (isNaN(s) || isNaN(m) || s <= 0 || m <= 0) {
       setErro("Informe valores válidos.")
+      return null
+    }
+
+    setErro("")
+    return s * 0.08 * m
+  }
+
+  function handleCalcular() {
+    const total = calcularValor()
+
+    if (!total) {
       setResultado(null)
       return
     }
 
-    setErro("")
-    const total = s * 0.08 * m
+    // 🔥 Intercepta antes de mostrar resultado
+    if (!unlocked) {
+      setShowLeadGate(true)
+      return
+    }
+
     setResultado(total)
+  }
+
+  async function liberarResultado(e: React.FormEvent) {
+    e.preventDefault()
+
+    // 🔒 Validação simples
+    if (!nome || !whatsapp) {
+      alert("Preencha nome e WhatsApp")
+      return
+    }
+
+    try {
+      // 🔥 Calcula novamente (garante consistência)
+      const total = calcularValor()
+
+      if (!total) {
+        alert("Erro ao calcular valores")
+        return
+      }
+
+      // 📡 Envia lead para backend
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome,
+          whatsapp,
+          valor: total,
+        }),
+      })
+
+      // ⚠️ Se falhar, não bloqueia usuário (IMPORTANTE)
+      if (!response.ok) {
+        console.error("Erro ao enviar lead")
+      }
+
+      // 🔓 Libera resultado
+      setUnlocked(true)
+      setShowLeadGate(false)
+      setResultado(total)
+
+    } catch (error) {
+      console.error("Erro geral:", error)
+
+      // 🔓 Mesmo com erro, libera resultado (UX primeiro)
+      const total = calcularValor()
+      setUnlocked(true)
+      setShowLeadGate(false)
+      setResultado(total || null)
+    }
   }
 
   const depositoMensal =
@@ -80,11 +162,49 @@ export default function SimuladorFGTS() {
         {erro && <p className="text-red-600 text-sm">{erro}</p>}
 
         <button
-          onClick={calcular}
+          onClick={handleCalcular}
           className="bg-green-600 text-white px-6 py-3 rounded font-bold w-full hover:bg-green-700"
         >
           Calcular FGTS
         </button>
+
+        {/* 🔒 LEAD GATE */}
+        {showLeadGate && (
+          <div className="bg-white p-6 rounded-2xl shadow-lg border text-center mt-6">
+            <h2 className="text-xl font-bold mb-2">
+              🔒 Veja seu saldo FGTS liberado
+            </h2>
+
+            <p className="text-gray-600 mb-4">
+              Você tem saldo disponível. Informe seu WhatsApp para liberar o valor completo 👇
+            </p>
+
+            <form onSubmit={liberarResultado} className="flex flex-col gap-3">
+              <input
+                type="text"
+                placeholder="Seu nome"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                className="border p-2 rounded"
+              />
+
+              <input
+                type="tel"
+                placeholder="WhatsApp"
+                value={whatsapp}
+                onChange={(e) => setWhatsapp(formatarWhatsapp(e.target.value))}
+                className="border p-2 rounded"
+              />
+
+              <button
+                type="submit"
+                className="bg-green-600 text-white py-2 rounded font-semibold hover:bg-green-700"
+              >
+                Liberar resultado
+              </button>
+            </form>
+          </div>
+        )}
 
         {resultado !== null && (
           <>
@@ -113,7 +233,16 @@ export default function SimuladorFGTS() {
 
             </div>
 
-            {/* 🔥 CTA (DINHEIRO) */}
+            {/* 💰 CTA MONETIZAÇÃO */}
+            <a
+              href="#"
+              target="_blank"
+              className="block mt-6 bg-green-600 text-white text-center py-3 rounded-lg font-bold hover:bg-green-700"
+            >
+              💰 Antecipar saque FGTS agora
+            </a>
+
+            {/* 🔥 CTA ORIGINAL */}
             <div className="mt-6 text-blue-600 text-sm">
               👉{" "}
               <Link href="/simuladores/multa-40" className="underline">
@@ -121,7 +250,7 @@ export default function SimuladorFGTS() {
               </Link>
             </div>
 
-            {/* 🔥 ANÚNCIO (alta conversão) */}
+            {/* 🔥 ANÚNCIO */}
             <div className="mt-6">
               <AdsenseBlock />
             </div>
@@ -130,7 +259,7 @@ export default function SimuladorFGTS() {
 
       </div>
 
-      {/* 🔥 CONTEÚDO SEO */}
+      {/* 🔥 CONTEÚDO SEO (MANTIDO) */}
       <section className="mt-12 space-y-6 text-gray-700">
 
         <h2 className="text-xl font-semibold">
