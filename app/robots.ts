@@ -2,13 +2,13 @@ import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-    ],
-    sitemap: "https://simuladorfgts.com.br/sitemap.xml",
-    host: "https://simuladorfgts.com.br",
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+
+    sitemap: "https://www.simuladorfgts.com.br/sitemap.xml",
+
+    host: "https://www.simuladorfgts.com.br",
   }
 }
